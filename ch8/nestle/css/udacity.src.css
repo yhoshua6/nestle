@@ -6715,6 +6715,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/bootstrap3\/navbar\.less}line{font-family:\00003218}}
 .navbar-nav {
   margin: 1.5px -15px;
+    text-align: center;
+font-size: 12px;
 }
 /* line 221, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/bootstrap3/navbar.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/bootstrap3\/navbar\.less}line{font-family:\00003221}}
@@ -8290,30 +8292,57 @@ h6 .small,
 .theme-nd007 .theme-border-color {
   border-color: #6a5f9b !important;
 }
+/*------------------------------------------*/
+/* line 147, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003147}}
+.theme-nd014 .theme-stroke {
+  stroke: #B613ED;
+}
+/* line 150, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003150}}
+.theme-nd014 .theme-fill {
+  fill: #B613ED;
+}
+/* line 153, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003153}}
+.theme-nd014 .theme-color {
+  color: #B613ED !important;
+}
+/* line 156, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003156}}
+.theme-nd014 .theme-background-color {
+  background-color: #B613ED;
+}
+/* line 159, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003159}}
+.theme-nd014 .theme-border-color {
+  border-color: #B613ED !important;
+}
+/*------------------------------------------*/
 /* line 147, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003147}}
 .theme-nd004 .theme-stroke {
-  stroke: #6b80dd;
+  stroke: #E875A4;
 }
 /* line 150, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003150}}
 .theme-nd004 .theme-fill {
-  fill: #6b80dd;
+  fill: #E875A4;
 }
 /* line 153, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003153}}
 .theme-nd004 .theme-color {
-  color: #6b80dd !important;
+  color: #E875A4 !important;
 }
 /* line 156, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003156}}
 .theme-nd004 .theme-background-color {
-  background-color: #6b80dd;
+  background-color: #E875A4;
 }
 /* line 159, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003159}}
 .theme-nd004 .theme-border-color {
-  border-color: #6b80dd !important;
+  border-color: #E875A4 !important;
 }
 /* line 147, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003147}}
@@ -8343,77 +8372,77 @@ h6 .small,
 /* line 147, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003147}}
 .theme-nd002 .theme-stroke {
-  stroke: #ac4057;
+  stroke: #E07152;
 }
 /* line 150, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003150}}
 .theme-nd002 .theme-fill {
-  fill: #ac4057;
+  fill: #E07152;
 }
 /* line 153, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003153}}
 .theme-nd002 .theme-color {
-  color: #ac4057 !important;
+  color: #E07152 !important;
 }
 /* line 156, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003156}}
 .theme-nd002 .theme-background-color {
-  background-color: #ac4057;
+  background-color: #E07152;
 }
 /* line 159, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003159}}
 .theme-nd002 .theme-border-color {
-  border-color: #ac4057 !important;
+  border-color: #E07152 !important;
 }
 /* line 147, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003147}}
 .theme-nd801 .theme-stroke {
-  stroke: #149671;
+  stroke: #E09E00;
 }
 /* line 150, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003150}}
 .theme-nd801 .theme-fill {
-  fill: #149671;
+  fill: #E09E00;
 }
 /* line 153, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003153}}
 .theme-nd801 .theme-color {
-  color: #149671 !important;
+  color: #E09E00 !important;
 }
 /* line 156, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003156}}
 .theme-nd801 .theme-background-color {
-  background-color: #149671;
+  background-color: #E09E00;
 }
 /* line 159, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003159}}
 .theme-nd801 .theme-border-color {
-  border-color: #149671 !important;
+  border-color: #E09E00 !important;
 }
 /* line 147, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003147}}
 .theme-nd003 .theme-stroke {
-  stroke: #e7654e;
+  stroke: #0AC672;
 }
 /* line 150, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003150}}
 .theme-nd003 .theme-fill {
-  fill: #e7654e;
+  fill: #0AC672;
 }
 /* line 153, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003153}}
 .theme-nd003 .theme-color {
-  color: #e7654e !important;
+  color: #0AC672 !important;
 }
 /* line 156, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003156}}
 .theme-nd003 .theme-background-color {
-  background-color: #e7654e;
+  background-color: #0AC672;
 }
 /* line 159, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003159}}
 .theme-nd003 .theme-border-color {
-  border-color: #e7654e !important;
+  border-color: #0AC672 !important;
 }
 /* line 147, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003147}}
@@ -8433,7 +8462,7 @@ h6 .small,
 /* line 156, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003156}}
 .theme-nd001 .theme-background-color {
-  background-color: #00a4b9;
+  background-color: #00A4B9;
 }
 /* line 159, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/components/udacity/udacityBS.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/components\/udacity\/udacityBS\.less}line{font-family:\00003159}}
@@ -14011,10 +14040,9 @@ body {
 /* line 9, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/udacity/site_footer.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/udacity\/site_footer\.less}line{font-family:\000039}}
 #page-content {
-  min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -355px;
+  margin: 0 auto;
 }
 /* line 16, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/udacity/site_footer.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/udacity\/site_footer\.less}line{font-family:\0000316}}
@@ -14024,7 +14052,7 @@ body {
 /* line 20, /var/lib/jenkins/jobs/udacityu-PROD-STAGING/workspace/udacityu/static/css/udacity/site_footer.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/jenkins\/jobs\/udacityu-PROD-STAGING\/workspace\/udacityu\/static\/css\/udacity\/site_footer\.less}line{font-family:\0000320}}
 #footer {
-  height: 355px;
+  height: 100px;
   border-top: solid 1px #e6e6e6;
   background-color: #f3f3f3;
   margin-top: 0;
