@@ -1,0 +1,169 @@
+.navbar.site-nav{
+    transition-duration: 400ms;
+transition-timing-function: ease;
+transition-delay: 0s;
+transition-property: background-color, color, border-color;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+    border-color: #1E3547;
+}
+.container > .navbar-header{
+margin-top: 3px;
+}
+.btn-warning{
+    background: #C41E0D;
+}
+.btn-warning:hover{
+    background: #B51C0C;
+}
+.navbar-inverse{
+background-color: #294860;
+border-color: #294860;
+}
+.course-overview-banner{
+background-image: linear-gradient(to bottom, #FAFAFA 0%, #DCDCDC 100%);
+background-repeat: repeat-x;
+}
+.banner .banner-content{
+    position: relative;
+background-size: cover;
+background-position: center center;
+}
+.course-overview-banner .course-header-pane{
+margin-top: 80px;
+background-color: rgba(255, 255, 255, 0.7);
+}
+.navbar-collapse.collapse{
+height: auto !important;
+padding-bottom: 0px;
+overflow: visible !important;
+}
+.navbar-static-top{
+    z-index: 1000;
+    border-width: 0 0 1px;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus{
+    color: #ffffff;
+    background-color: #294860;
+}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus{
+    color: #ffffff;
+    background-color: #294860;
+}
+.navbar{
+    position: relative;
+    min-height: 35px;
+    margin-bottom: 23px;
+    border: 1px solid transparent;
+}
+body{
+    font-family: "Whitney SSm A", "Whitney SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #303030;
+    background-color: #ffffff;
+}
+.navbar-toggle{
+        position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 0.5px;
+    margin-bottom: 0.5px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+.navbar-inverse .navbar-brand{
+    color: #e6e6e6;
+}
+.navbar-inverse .navbar-brand{
+    font-family: "Open sans", helvetica, arial;
+    font-size: 24px;
+    color: white;
+    padding: 0 0 0 15px;
+    margin: 12px 0 0 0;
+}
+.navbar-toggle .icon-bar{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.navbar-brand{
+    float: left;
+    padding: 3px 15px;
+    font-size: 18px;
+    line-height: 23px;
+    height: 44px;
+}
+.navbar-inverse .navbar-nav > li > a{
+    color: rgba(255, 255, 255, 0.65);
+}
+.site-nav.nav > li > a, .site-nav .navbar-nav > li > a{
+    padding: 8px 20px 4px 20px;
+}
+.navbar-nav{
+    text-align: center;
+    font-size: 12px;
+}
+.navbar-inverse .navbar-toggle{
+    border-color: transparent;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
+    background-color: transparent;
+}
+.navbar-inverse{
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 25px;
+    margin-bottom: 0;
+}
+.navbar-inverse .navbar-brand img{
+    margin-top: -8px;
+    vertical-align: middle;
+}
+h2, .h2{
+    font-size: 22px;
+    color: #307699;
+    line-height: 1.6;
+    font-weight: bold;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
+    padding: 8px;
+    line-height: 1.7;
+    vertical-align: top;
+    border-top: 1px solid #dddddd;
+}
+.table th{
+        font-family: inherit;
+    font-weight: bold;
+    line-height: 1.1;
+    color: inherit;
+    margin-top: 11.5px;
+    margin-bottom: 11.5px;
+    font-size: 12px;
+    color: #767676;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+#footer{
+    height: 100px;
+    border-top: solid 1px #e6e6e6;
+    background-color: #f3f3f3;
+    margin-top: 0;
+    padding-bottom: 40px;
+}
+.section.section-slim, .section-inverse.section-slim{
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #f3f3f3;
+}
+.row.row-gap-huge{
+    margin-top: 60px;
+}
+.row.row-gap-huge{
+    margin-top: 60px;
+}
