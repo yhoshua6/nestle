@@ -1,0 +1,957 @@
+<html data-ng-app="page.viewer" data-enforce-browser="" class="ng-scope"><head><script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflFYKrKp/www-widgetapi.js" async=""></script><script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+	<title>Aula Virtual Nestlé</title>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="https://www.nestle.com.mx/staticlocal/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" type="text/css" href="css/udacity.min.css">
+    <link rel="stylesheet" type="text/css" href="css/udacity.src.css">
+	<link rel="stylesheet" href="css/homepage.min.css" type="text/css">
+</head>
+<body data-ng-controller="siteFrame" data-modal-anti-scroll-helper data-ng-class="{'responsive': responsivenessIsEnabled, 'non-responsive': !responsivenessIsEnabled, 'modal-open': isModalActive()}">
+<div class="alert alert-banner alert-error ng-hide" data-warn-browser="" data-ng-show="(warnBrowserTech() &amp;&amp; !warnBrowserDismissed())" style="padding:20px 20%;">
+        <p>Udacity does not support your browser. We're sorry for the inconvenience. <strong>:(</strong> </p>
+        <p>You can continue using Udacity with your current browser, but you will likely run into unresponsive areas within a class, degraded performance, and <strong>lost data.</strong> For a much better experience, please upgrade your browser. <strong><a href="/upgrade">Here are some recommendations.</a></strong></p>
+        <p>If you wish to continue using Udacity with your current browser, please click the red button below: </p>
+        <div style="text-align:center">
+                <button class="btn btn-danger" data-ng-click="warnBrowserDismiss(604800)" style="background: #9d261d">I understand that Udacity might not fully work with my current browser and that my data may consequently be lost.</button>
+        </div>
+</div>
+	<div id="page-content">
+		
+		<header class="navbar site-nav navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+							<a itemprop="brand" itemscope="" itemtype="http://schema.org/Brand" class="logo navbar-brand" href="/me" id="header-logo">
+								<meta itemprop="logo" content="https://lh6.ggpht.com/pXxnDpPZHXnKqBqwvI4cmhsztuM23lbmy0o5zVEZTfXQR69u5Nlx7hfxcCOGZP_Yp_3HwpK3zVAtXejMAg=s0">
+								<img alt="Udacity Logo" src="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" srcset="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" style="width:213px;">
+							</a>
+
+					
+				</div>
+
+<nav class="navbar-collapse collapse text-center-xs" id="navbar-collapse" role="navigation">
+					
+						<!-- Logged out dropdowns -->
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="login.html">Ingresar</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="content.html">Contenido</a>
+                                </li>
+                            </ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="course.html">Curso</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="dashboard.html">Clase</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="user.html">Usuario</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="index.html">Inicio</a>
+								</li>
+							</ul>
+				</nav>
+			</div>
+		</header>
+		
+<div data-responsiveness-enabler>
+
+
+
+<div class="container left-hand-nav-container ng-scope" data-ng-controller="viewerPage" data-content-gate-watcher="">
+
+	<!-- ngIf: !userIsLoggedIn -->
+
+	<div data-ng-controller="viewerExam" class="ng-scope">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 class="h-slim left-hand-nav-title ng-binding">
+					Introducción a las TIC's
+				</h1>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+			<div class="col-xs-1 text-center left-hand-nav ng-isolate-scope current-nav-location-viewer" data-ng-class="'current-nav-location-' + location" left-hand-nav="" location="viewer" course-key="courseKeyFromUrl" lesson-key="lessonKeyFromUrl">
+		<div data-ng-hide="courseKey == 'none'" class="">
+			<div class="row row-gap-small" data-ng-show="semanticType=='Course'">
+				<div class="col-xs-12 nav-location-btn nav-location-dashboard">
+					<a data-ng-href="/course/progress#!/c-ud304" class="text-swap-animation" href="/course/progress#!/c-ud304">
+						<span class="sprite-dashboard"></span><br>
+						Progreso
+					</a>
+				</div>
+			</div>
+			<div class="row row-gap-small ng-hide" data-ng-show="!semanticType || semanticType=='unknown' || semanticType =='Degree'">
+				<div class="col-xs-12 nav-location-btn nav-location-dashboard">
+					<span class="text-swap-animation">
+						<span class="sprite-dashboard sprite-dashboard-disabled"></span><br>
+						<span class="text-disabled">Dashboard</span>
+					</span>
+				</div>
+			</div>
+			<div class="row row-gap-small">
+				<div class="col-xs-12 nav-location-btn nav-location-viewer">
+					<a data-ng-href="/course/viewer#!/c-ud304" href="/course/viewer#!/c-ud304">
+						<span class="sprite-viewer"></span>
+						<br>
+						Clases
+					</a>
+				</div>
+			</div>
+			<div class="row row-gap-small">
+				<div class="col-xs-12 nav-location-btn nav-location-materials">
+					<a data-ng-href="/wiki/ud304" href="/wiki/ud304">
+						<span class="sprite-materials"></span><br>
+						Materiales
+					</a>
+				</div>
+			</div>
+			<div class="row row-gap-small" data-ng-hide="limitedAccess">
+				<div class="col-xs-12 nav-location-btn nav-location-discussion">
+						<a href="dashboard.html" target="_blank" data-ng-show="showDiscussion" class="text-swap-animation">
+							<span class="sprite-discussion"></span><br>
+							Discusión
+						</a>
+						<span data-ng-hide="showDiscussion" class="text-swap-animation ng-hide">
+							<span class="sprite-discussion sprite-discussion-disabled"></span><br>
+							<span class="text-muted">Discussion</span>
+						</span>
+				</div>
+			</div>
+			<div class="row row-gap-small" data-ng-hide="limitedAccess || semanticType!='Course'">
+				<div class="col-xs-12 nav-location-btn nav-location-overview">
+					<a data-ng-href="/course/ud304" href="/course/ud304">
+						<span class="sprite-overview"></span><br>
+						Vista general
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+			<div class="col-xs-11 viewer-main">
+
+				<!-- Modals and Overlays -->
+				<!-- ngInclude: modalsUrl --><div data-ng-include="modalsUrl" class="ng-scope"><!-- Student reaches the end of a lesson -->
+<div data-modal-dialog="endOfLesson" class="ng-scope"><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><span data-ng-if="!disableClose" class="ng-scope"><button type="button" aria-label="close" class="close hanging-close" data-ng-click="cornerClose({message:'cornerClose'})"></button></span><!-- end ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<div class="modal-header ng-scope">
+		<!-- This file treats 'ca' and 'nd' courses the same (course['_semantic_type'] === 'Degree') -->
+		<!-- Courses -->
+		<!-- ngIf: course['_semantic_type'] !== 'Degree' --><span data-ng-if="course['_semantic_type'] !== 'Degree'" class="ng-scope">Congratulations</span><!-- end ngIf: course['_semantic_type'] !== 'Degree' -->
+		<!-- Nanodegree -->
+		<!-- ngIf: course['_semantic_type'] === 'Degree' -->
+	</div>
+	<div class="modal-body ng-scope">
+		<!-- Course -->
+		<!-- ngIf: course['_semantic_type'] !== 'Degree' --><div class="row ng-scope" data-ng-if="course['_semantic_type'] !== 'Degree'">
+			<div class="col-xs-12 col-sm-8">
+				<p>You've made it through the lesson. Great job!</p>
+				<p>
+					Tell your friends
+					<a href="" data-ng-class="classes" data-ng-click="share()" data-ng-transclude="" style="margin-left: 10px;" class="sprite sprite-vertical-center sprite-facebook-alt ng-isolate-scope" data-facebook-share="{name: course.title, link: 'https://www.udacity.com/course/' + course['_slug'], caption: course['catalog_entry']['subtitle'], description: 'I just finished ' + lesson.title + ' in ' + course.title + '. Check it out!'}"></a>
+					<a href="" data-ng-class="classes" data-ng-click="share()" ng-transclude="" class="sprite sprite-vertical-center sprite-gplus-alt ng-isolate-scope" data-google-plus-share="{link: 'https://www.udacity.com/course/' + course['_slug']}"></a>
+					<a target="_blank" ng-class="attributes.class" ng-href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.udacity.com%2Fcourse%2Fintro-to-html-and-css--ud304&amp;text=I%20just%20completed%20a%20lesson%20in%20Intro%20to%20HTML%20and%20CSS%20%40Udacity.%20Check%20it%20out!" ng-transclude="" class="sprite sprite-vertical-center sprite-twitter-alt ng-isolate-scope" data-tweet-link="" data-tweet="{text: 'I just completed a lesson in ' + course.title + ' @Udacity. Check it out!', url: 'https://www.udacity.com/course/' + course['_slug']}" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.udacity.com%2Fcourse%2Fintro-to-html-and-css--ud304&amp;text=I%20just%20completed%20a%20lesson%20in%20Intro%20to%20HTML%20and%20CSS%20%40Udacity.%20Check%20it%20out!"></a>
+				</p>
+			</div>
+			<div class="hidden-xs col-sm-4 text-align-center">
+				<img class="img-responsive" alt="Check mark on a lesson in a path of lessons" src="//lh3.ggpht.com/y6SPDJFkkPSh3VjSWDnLjcepWoVybZcAVPTkomeX3BNbgVi-LZx36dq1Ci_BDz2SlWx-fkwtPZS5faxWTQQ=s198#w=420&amp;h=260">
+			</div>
+		</div><!-- end ngIf: course['_semantic_type'] !== 'Degree' -->
+		<!-- Nanodegree -->
+		<div class="row">
+			<!-- ngIf: course['_semantic_type'] === 'Degree' -->
+		</div>
+	</div>
+	<div class="modal-footer ng-scope">
+		<button class="btn btn-default" data-ng-click="cancel()">Stay Here</button>
+		<!-- ngIf: course['_semantic_type'] === 'Degree' -->
+		<!-- ngIf: course['_semantic_type'] !== 'Degree' --><button class="btn btn-primary ng-scope" data-ng-if="course['_semantic_type'] !== 'Degree'" data-ng-click="goToNextLesson(); confirm()">Continue</button><!-- end ngIf: course['_semantic_type'] !== 'Degree' -->
+	</div>
+</div></div></div></div>
+
+<!-- Student reaches the end of a course -->
+<div data-modal-dialog="endOfCourse" class="ng-scope"><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><span data-ng-if="!disableClose" class="ng-scope"><button type="button" aria-label="close" class="close hanging-close" data-ng-click="cornerClose({message:'cornerClose'})"></button></span><!-- end ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<!-- ngIf: course['_semantic_type'] !== 'Degree' --><div class="modal-header ng-scope" data-ng-if="course['_semantic_type'] !== 'Degree'">
+		<!-- Free user completes -->
+		<!-- ngIf: getData().isPaidEnrolled -->
+		<!-- ngIf: !getData().isPaidEnrolled --><span data-ng-if="!getData().isPaidEnrolled" class="ng-scope">
+			<span data-ng-show="getData().courseIsComplete" class="ng-hide">Congrats!</span>
+			<span data-ng-hide="getData().courseIsComplete" class="">That's all...for now!</span>
+		</span><!-- end ngIf: !getData().isPaidEnrolled -->
+	</div><!-- end ngIf: course['_semantic_type'] !== 'Degree' -->
+	<!-- ngIf: course['_semantic_type'] === 'Degree' -->
+	<div class="modal-body ng-scope">
+		<!-- Course -->
+		<!-- ngIf: course['_semantic_type'] !== 'Degree' --><div class="row ng-scope" data-ng-if="course['_semantic_type'] !== 'Degree'">
+			<div class="col-xs-4 col-xs-push-4 col-sm-push-8 text-align-center">
+				<img class="img-responsive" alt="Space ship blasting off" src="http://lh3.ggpht.com/G-VNxbbq2TvqAaupYg215_cpDhytI6FNJZtG33zFnQM9i78XsbuT2TVpUe-KdrRaHii0H9KDNKF6Za3RARs=s198#w=420&amp;h=260">
+			</div>
+			<div class="col-xs-12 col-sm-8 col-sm-pull-4">
+				<!-- ngIf: getData().isPaidEnrolled -->
+				<!-- ngIf: !getData().isPaidEnrolled --><div data-ng-if="!getData().isPaidEnrolled" class="ng-scope">
+					<p>
+						You have reached the end of the course materials.
+						Explore our other courses to continue learning.
+					</p>
+					<p>
+						Tell your friends
+						<a href="" data-ng-class="classes" data-ng-click="share()" data-ng-transclude="" style="margin-left: 10px;" class="sprite sprite-vertical-center sprite-facebook-alt ng-isolate-scope" data-facebook-share="{name: course.title, link: 'https://www.udacity.com/course/' + course['_slug'], caption: course['catalog_entry']['subtitle'], description: 'I just finished ' + course.title + '. Check it out!'}"></a>
+						<a href="" data-ng-class="classes" data-ng-click="share()" ng-transclude="" class="sprite sprite-vertical-center sprite-gplus-alt ng-isolate-scope" data-google-plus-share="{link: 'https://www.udacity.com/course/' + course['_slug']}"></a>
+						<a target="_blank" ng-class="attributes.class" ng-href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.udacity.com%2Fcourse%2Fintro-to-html-and-css--ud304&amp;text=I%20just%20finished%20Intro%20to%20HTML%20and%20CSS%20%40Udacity.%20Check%20it%20out!" ng-transclude="" class="sprite sprite-vertical-center sprite-twitter-alt ng-isolate-scope" data-tweet-link="" data-tweet="{text: 'I just finished ' + course.title + ' @Udacity. Check it out!', url: 'https://www.udacity.com/course/' + course['_slug']}" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.udacity.com%2Fcourse%2Fintro-to-html-and-css--ud304&amp;text=I%20just%20finished%20Intro%20to%20HTML%20and%20CSS%20%40Udacity.%20Check%20it%20out!"></a>
+					</p>
+				</div><!-- end ngIf: !getData().isPaidEnrolled -->
+			</div>
+		</div><!-- end ngIf: course['_semantic_type'] !== 'Degree' -->
+		<!-- Nanodegree and Career -->
+		<!-- ngIf: course['_semantic_type'] === 'Degree' -->
+	</div>
+	<div class="modal-footer ng-scope">
+		<button class="btn btn-default" data-ng-click="cancel()">Stay Here</button>
+		<!-- ngIf: isNanodegreeRelatedCourse(course) || course['_semantic_type'] === 'Degree' -->
+		<!-- ngIf: !isNanodegreeRelatedCourse(course) && course['_semantic_type'] !== 'Degree' --><a class="btn btn-primary ng-scope" data-ng-if="!isNanodegreeRelatedCourse(course) &amp;&amp; course['_semantic_type'] !== 'Degree'" href="/courses/all">Browse Courses</a><!-- end ngIf: !isNanodegreeRelatedCourse(course) && course['_semantic_type'] !== 'Degree' -->
+	</div>
+</div></div></div></div>
+
+<!-- Student just correctly answered a quiz but isn't signed in -->
+<div data-modal-dialog="signInGate" data-disable-close="" class="ng-scope"><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<div class="modal-header ng-scope">
+		Correct! Now make it count!
+	</div>
+	<div class="modal-body ng-scope">
+		<p>
+			Great job on getting this quiz right. Register now to get access to all the course materials!
+		</p>
+		<p data-ng-controller="contentGate" class="ng-scope">
+			Already Udacious? <a data-ng-click="signInAndReturnToCourse(course.key)">Sign in</a>
+		</p>
+	</div>
+	<div class="modal-footer ng-scope" data-ng-controller="contentGate">
+		<a class="btn btn-default" data-ng-href="/course/intro-to-html-and-css--ud304" href="/course/intro-to-html-and-css--ud304">View Course Overview</a>
+		<button class="btn btn-primary" data-ng-click="signUpAndReturnToCourse(course.key)">Sign Up</button>
+	</div>
+</div></div></div></div>
+
+<!-- Student reaches the end of a lesson or course but isn't a Udacian yet -->
+<div data-modal-dialog="endOfLessonSignInGate" class="ng-scope"><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><span data-ng-if="!disableClose" class="ng-scope"><button type="button" aria-label="close" class="close hanging-close" data-ng-click="cornerClose({message:'cornerClose'})"></button></span><!-- end ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<div class="modal-header ng-scope">
+		Get the real deal
+	</div>
+	<div class="modal-body ng-scope">
+		<p>
+			Excited to continue learning? Register now to get access to all the course materials!
+		</p>
+		<p data-ng-controller="contentGate" class="ng-scope">
+			Already Udacious? <a data-ng-click="signInAndReturnToCourse(course.key)">Sign in</a>
+		</p>
+	</div>
+	<div class="modal-footer ng-scope" data-ng-controller="contentGate">
+		<a class="btn btn-default" data-ng-href="/course/intro-to-html-and-css--ud304" href="/course/intro-to-html-and-css--ud304">View Course Overview</a>
+		<button class="btn btn-primary" data-ng-click="signUpAndReturnToCourse(course.key)">Sign Up</button>
+	</div>
+</div></div></div></div>
+
+<!-- Student reaches the end of an isolated lesson -->
+<div data-modal-dialog="endOfIsolatedContent" class="ng-scope"><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><span data-ng-if="!disableClose" class="ng-scope"><button type="button" aria-label="close" class="close hanging-close" data-ng-click="cornerClose({message:'cornerClose'})"></button></span><!-- end ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<div class="modal-header ng-scope">
+		All done!
+	</div>
+	<div class="modal-body ng-scope">
+		<p>
+			Thank you for checking out this content.
+		</p>
+	</div>
+	<div class="modal-footer ng-scope" data-ng-controller="contentGate">
+		<button class="btn btn-primary" data-ng-click="cancel()">OK</button>
+	</div>
+</div></div></div></div>
+
+
+<!-- Student just answered a quiz and needs to add to my courses -->
+<div class="ng-scope" data-modal-dialog="enrollGate"><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><span data-ng-if="!disableClose" class="ng-scope"><button type="button" aria-label="close" class="close hanging-close" data-ng-click="cornerClose({message:'cornerClose'})"></button></span><!-- end ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<div class="modal-header ng-scope">
+		Correct! Now make it count
+	</div>
+	<div class="modal-body ng-scope">
+		<p>
+			Great job on getting this quiz right. Add this course to your
+			My Courses to save your learning progress.
+		</p>
+	</div>
+	<div class="modal-footer ng-scope" data-ng-controller="contentGate">
+		<button class="btn btn-default" data-ng-click="cancel()">Not Now</button>
+		<button class="btn btn-primary" data-ng-disabled="enrollRequestPending" data-ng-click="enrollInCourse(course.key)">
+			Add to My Courses
+		</button>
+	</div>
+</div></div></div></div>
+
+<!-- Student just answered a quiz and needs to add to my courses -->
+<div class="ng-scope" data-modal-dialog="endOfLessonEnrollGate" data-disable-close=""><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<div class="modal-header ng-scope">
+		Make it count
+	</div>
+	<div class="modal-body ng-scope">
+		<p>
+			Great job on making it this far. Add this course to your
+			My Courses to save your learning progress.
+		</p>
+	</div>
+	<div class="modal-footer ng-scope" data-ng-controller="contentGate">
+		<button class="btn btn-default" data-ng-click="confirm(); goToNextLesson();">Not Now</button>
+		<button class="btn btn-primary" data-ng-disabled="enrollRequestPending" data-ng-click="enrollInCourse(course.key); goToNextLesson()">Add to My Courses</button>
+	</div>
+</div></div></div></div>
+</div>
+
+				<!-- Upsell modal for downloadables -->
+				<div data-supplemental-materials-upsell-modal="" course-key="course['key']" product-id="course['catalog_entry']['paid_class']['class_product_refs'][0]['key']" class="ng-isolate-scope"><div data-modal-dialog="supplementalMaterialsUpsell" class="ng-scope"><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><span data-ng-if="!disableClose" class="ng-scope"><button type="button" aria-label="close" class="close hanging-close" data-ng-click="cornerClose({message:'cornerClose'})"></button></span><!-- end ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<div class="modal-header ng-scope">
+		Take your learning to the next level!
+	</div>
+	<div class="modal-body ng-scope">
+		<div class="row">
+			<div class="col-sm-8">
+				<p>
+					Access downloadable lesson notes and additional materials
+					by enrolling in this course for
+					<strong>
+						<span data-ng-hide="productPrice" class="ng-hide">getting price</span>
+						<span data-ng-show="productPrice" class="ng-binding">$199/month.</span>
+					</strong>
+					You'll also get support from Udacity Coaches, project feedback,
+					and a Verified Certificate.
+				</p>
+			</div>
+			<div class="hidden-xs col-sm-4">
+				<img class="img-responsive" src="//lh6.ggpht.com/WKHAg0cKAl6-dzViz2RWuKFObfO1izzXE-yhMSoPNRxB2pNIf5-RgM-ewPfGZ95_5Xd0hcjwDcg_XUX85Q=s159#w=210&amp;h=130" alt="a symbol of learning">
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer ng-scope">
+		<a class="btn btn-default" data-ng-click="cancel()">Not Now</a>
+		<a class="btn btn-primary" data-ng-href="/checkout#!/0?products=5142514559877120" href="/checkout#!/0?products=5142514559877120">
+			Start Free Trial
+		</a>
+	</div>
+</div></div></div></div>
+</div>
+
+				<div class="viewer-loading-overlay text-center ng-hide" data-ng-show="!lesson || isViewerLoading">
+					<div style="margin-top: 200px;">
+						<img src="//lh5.ggpht.com/b3OandPWsUWAnRVS5d8JS8OL0nu8dU2d3NceS7p1yKhPl9KD4EhqeylPm7yFbft5wmsA2VCAZ-8wAkmFduXJ=s0#w=90&amp;h=30">
+						<p class="text-center ng-binding">Did you know you can meet other Udacians on the Forums?</p>
+					</div>
+				</div>
+
+				<!-- Viewer Area Header -->
+				<div class="row row-gap-small">
+					<div class="col-xs-9">
+							<div class="btn-group">
+								<button data-ng-disabled="!userIsLoggedIn" class="btn btn-default dropdown-toggle ng-binding" type="button" data-toggle="dropdown">
+									<span class="glyphicon glyphicon-th-list" style="font-size: 12px; margin-right: 10px;"></span>
+									Lección 1
+								</button>
+								<ul class="dropdown-menu dropdown-menu-scrollable">
+									<!-- ngRepeat: aLesson in lessons --><li data-ng-repeat="aLesson in lessons" class="ng-scope">
+										<a href="" data-ng-click="goToLesson(aLesson.key)" class="ng-binding">Lesson 1: HTML, CSS, and Boxes</a>
+									</li><!-- end ngRepeat: aLesson in lessons --><li data-ng-repeat="aLesson in lessons" class="ng-scope">
+										<a href="" data-ng-click="goToLesson(aLesson.key)" class="ng-binding">Lesson 1 Practice</a>
+									</li><!-- end ngRepeat: aLesson in lessons --><li data-ng-repeat="aLesson in lessons" class="ng-scope">
+										<a href="" data-ng-click="goToLesson(aLesson.key)" class="ng-binding">L2: CSS Frameworks, Responsive Layouts</a>
+									</li><!-- end ngRepeat: aLesson in lessons --><li data-ng-repeat="aLesson in lessons" class="ng-scope">
+										<a href="" data-ng-click="goToLesson(aLesson.key)" class="ng-binding">L3: Bootstrap and Other Frameworks</a>
+									</li><!-- end ngRepeat: aLesson in lessons --><li data-ng-repeat="aLesson in lessons" class="ng-scope">
+										<a href="" data-ng-click="goToLesson(aLesson.key)" class="ng-binding">Final Project</a>
+									</li><!-- end ngRepeat: aLesson in lessons -->
+								</ul>
+							</div>
+							<span class="text-muted" style="padding: 0 15px">&gt;</span>
+							<span class="ng-binding">Primer paso</span>
+							<!-- ngIf: morsel._can_write -->
+
+					</div>
+				</div>
+
+				<!-- Navigation -->
+				<div class="row row-gap-small">
+					<div class="col-xs-12">
+						<ol class="subway-nav">
+							<!-- ngRepeat: morsel in morsels --><li data-node-key="2698138588" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope is-viewed" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Intro to Course</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378557" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope is-viewed is-current" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">The First Step</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378558" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Exploring the Web</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378561" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Page Structure</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378563" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Summary of HTML</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378564" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Visual Styling</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2596138815" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">HTML-CSS-DOM</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2608808598" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Boxes Everywhere</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378567" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Boxes, Grids and Rules </span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2672258561" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Boxifying Design</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2875028536" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Interview with Jacques</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2635788572" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Boxes To HTML</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2965478547" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Creating the Files</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2599208804" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Adding Style</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378568" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Understanding CSS</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2663568566" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Styling Up</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2811608545" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Using Semantic Tags</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378569" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">The Box Revisited</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378571" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Positioning Boxes </span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378572" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Adding Image</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378574" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Code, Test, Refine</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378575" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">More on DevTools</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378577" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Comparing with the Design</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2771378579" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' --><a href="" class="subway-nav-quiz ng-scope" data-ng-if="morsel.model=='Exercise'" data-ng-class="{'is-complete': morsel.quiz_ref.completed}" data-ng-click="goToMorsel(morsel)">●</a><!-- end ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Verifying HTML and CSS</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels --><li data-node-key="2737748569" data-ng-repeat="morsel in morsels" class="subway-nav-station ng-scope" data-ng-class="getStyleClassesForMorsel(morsel)" style="">
+								<span>
+									<!-- ngIf: morsel.model=='Exercise' -->
+									<a href="" class="subway-nav-video" data-ng-click="goToMorsel(morsel)">&nbsp;
+										<span class="subway-nav-station-content text-break-word ng-binding">Conclusion</span>
+									</a>
+								</span>
+							</li><!-- end ngRepeat: morsel in morsels -->
+						</ol>
+					</div>
+				</div>
+
+				<!-- Current Morsel Player -->
+				<div class="row viewer-player ng-scope" data-ng-controller="viewerPlayer" data-ng-hide="isViewerLoading">
+					<!-- ngInclude: getPlayerPartialForCurrentMorsel() --><div data-ng-include="getPlayerPartialForCurrentMorsel()" class="ng-scope"><!-- Main player area -->
+<div class="col-xs-9 ng-scope">
+	<div data-player-loading-mask="" class="player-loading-mask"><div class="player-loading-overlay ng-hide" data-ng-show="isPlayerLoading" data-fade-out="200"><div class="player-loading-overlay-message"></div></div><div data-ng-transclude="">
+		<div class="row ng-scope">
+			<div class="col-xs-12">
+				<div class="scale-media scale-media-video">
+                    <iframe data-ng-controller="videoPlayer" class="ng-scope" frameborder="0" allowfullscreen="1" title="YouTube video player" width="930" height="523" src="https://www.youtube.com/embed/xIOeccZZ-5g?autoplay=1&amp;color=red&amp;controls=1&amp;rel=0&amp;showinfo=0&amp;fs=1&amp;theme=light&amp;wmode=opaque&amp;html5=1&amp;iv_load_policy=3&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.udacity.com" id="widget2"></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- Action buttons -->
+		<div class="row ng-scope">
+			<div class="col-xs-12 text-right">
+				<div class="viewer-button-bar">
+					<!-- Forward and back buttons for standalone videos -->
+					<span data-ng-hide="morsel.containingExercise" class="">
+						<button class="btn btn-default" tabindex="1000" ng-click="goToPreviousMorsel()">Previous</button>
+						<button class="btn btn-default" tabindex="1005" ng-click="goToNextMorsel()">Next</button>
+					</span>
+
+					<!-- If this video is part of an exercise, let them skip to to the quiz if they so desire -->
+					<button class="btn btn-default ng-hide" tabindex="1010" data-ng-show="morsel.key == morsel.containingExercise.lecture_ref.key" ng-click="goToMorsel(morsel.containingExercise.quiz_ref)">Skip to Quiz</button>
+					<button class="btn btn-default ng-hide" tabindex="1015" data-ng-show="morsel.key == morsel.containingExercise.answer_ref.key" ng-click="goToMorsel(morsel.containingExercise.quiz_ref)">Back to Quiz</button>
+					<button class="btn btn-primary ng-hide" tabindex="1020" ng-show="morsel.key == morsel.containingExercise.answer_ref.key" ng-click="goToNextMorsel()">Continue</button>
+				</div>
+			</div>
+		</div>
+	</div></div>
+
+	<!-- Instructor Notes and Downloadables-->
+	<div class="row">
+	 	<div class="col-xs-8"><div data-instructor-notes="" class="ng-scope"><div class="row">
+	<div class="col-xs-12">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>Notas del profesor</h2>
+			</div>
+		</div>
+		<!-- ngIf: canEdit -->
+		<div class="row">
+			<div class="col-xs-12 ng-scope" data-markdown="morsel['owner_comments']" data-mathquill="" data-watch="morsel['owner_comments']" data-target=".mathquill" data-placeholder="No additional notes for this section"><div class="markdown-container ng-binding" data-ng-bind-html="compiledOutput"><p>Siguenos en Twitter!<br>
+<a href="https://twitter.com/yhoshua6" target="_blank">@Josue</a><br>
+<a href="https://twitter.com/centeno" target="_blank">@Adesoft</a></p></div></div>
+		</div>
+	</div>
+</div>
+</div></div>
+		<div class="col-xs-4"><div data-supplemental-materials-list=""><div class="row guided-tour-exhibit-downloadables-introduction" data-guided-tour-exhibit="downloadables-introduction">
+	<div class="col-xs-12">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>Descargables</h2>
+				<p data-ng-hide="morsel['supplemental_media'].length || lesson['supplemental_media'].length || morsel['_video_zip_archive']['_uri'] || lesson['_video_zip_archive']['_uri'] || morsel['_transcript_zip_archive']['_uri'] || lesson['_transcript_zip_archive']['_uri']" class="ng-hide">
+					There are no relevant downloads for 
+					this part of the course.
+				</p>
+			</div>
+		</div>
+		<!-- Morsel level materials -->
+		<div data-ng-show="morsel['supplemental_media'].length || morsel['_video_zip_archive']['_uri'] || morsel['_transcript_zip_archive']['_uri']" class="ng-hide">
+			<div class="row">
+				<div class="col-xs-12">
+					<h4 class="h-slim">Section</h4>
+				</div>
+			</div>
+			<div data-supplemental-material-item="morsel['_video_zip_archive']" data-name-override="'Video'" data-premium-access="premiumAccess" class="ng-isolate-scope"><!-- ngIf: isReady() -->
+</div>
+			<div data-supplemental-material-item="morsel['_transcript_zip_archive']" data-name-override="'Transcript'" data-premium-access="premiumAccess" class="ng-isolate-scope"><!-- ngIf: isReady() -->
+</div>
+			<!-- ngRepeat: material in morsel['supplemental_media'] -->
+			<hr class="hr-slim">
+		</div>
+		<!-- Lesson level materials -->
+		<div data-ng-show="lesson['supplemental_media'].length || lesson['_video_zip_archive']['_uri'] || lesson['_transcript_zip_archive']['_uri']" class="">
+			<div class="row">
+				<div class="col-xs-12">
+					<h4 class="h-slim">Lecciones</h4>
+				</div>
+			</div>
+			<div data-supplemental-material-item="lesson['_video_zip_archive']" data-name-override="'Videos'" data-premium-access="premiumAccess" class="ng-isolate-scope"><!-- ngIf: isReady() --><div class="row row-gap-small clickable ng-scope" data-ng-if="isReady()" data-ng-click="openDownloadUrlOrDisplayUpsellModal()">
+	<div class="col-xs-10 ng-binding" data-ng-class="{'text-muted': !isAccessAllowed()}">
+		Videos
+	</div>
+	<div class="col-xs-2 text-right">
+		<img data-ng-show="isAccessAllowed()" src="http://lh5.ggpht.com/hJcAFWEZUQKz9x8A-YT6-mH-vKd4PH4uOwqbmCoahSUAYdyXAN2IvutaPD80jrRa9AGuG4AFJ0QAajpeUEs=s15#w=30&amp;h=30" alt="download this material" class="">
+		<img data-ng-hide="isAccessAllowed()" src="http://lh4.ggpht.com/gOt1oNZq53r48qoFKHib0ZzlB4UM5iEnAU2AhcVkOjuWx5fdjXr9-cbJ8gTs6pQ0_JRREsVaMFT88rR-uA=s15#w=30&amp;h=30" alt="subscribe to access this extra material" class="ng-hide">
+	</div>
+</div><!-- end ngIf: isReady() -->
+</div>
+			<div data-supplemental-material-item="lesson['_transcript_zip_archive']" data-name-override="'Transcripts'" data-premium-access="premiumAccess" class="ng-isolate-scope"><!-- ngIf: isReady() --><div class="row row-gap-small clickable ng-scope" data-ng-if="isReady()" data-ng-click="openDownloadUrlOrDisplayUpsellModal()">
+	<div class="col-xs-10 ng-binding" data-ng-class="{'text-muted': !isAccessAllowed()}">
+		Scripts
+	</div>
+	<div class="col-xs-2 text-right">
+		<img data-ng-show="isAccessAllowed()" src="http://lh5.ggpht.com/hJcAFWEZUQKz9x8A-YT6-mH-vKd4PH4uOwqbmCoahSUAYdyXAN2IvutaPD80jrRa9AGuG4AFJ0QAajpeUEs=s15#w=30&amp;h=30" alt="download this material" class="">
+		<img data-ng-hide="isAccessAllowed()" src="http://lh4.ggpht.com/gOt1oNZq53r48qoFKHib0ZzlB4UM5iEnAU2AhcVkOjuWx5fdjXr9-cbJ8gTs6pQ0_JRREsVaMFT88rR-uA=s15#w=30&amp;h=30" alt="subscribe to access this extra material" class="ng-hide">
+	</div>
+</div><!-- end ngIf: isReady() -->
+</div>
+			<!-- ngRepeat: material in lesson['supplemental_media'] -->
+		</div>
+	</div>
+
+	<!-- Guided tour info -->
+	<div class="placard-medium ng-scope" data-guided-tour-placard="downloadables-introduction" style="z-index: 10001; position: relative;"><div class="guided-tour-placard-container" data-ng-class="{'guided-tour-placard-container-current': show}"><div class="guided-tour-placard">
+		<div class="text-center ng-scope">
+			<img src="https://www.udacity.com/lh4.ggpht.com/Gw5YfKdYN_FfThHdCrdYLv8Wwr_xSWy7jD97DUokT_6wmT-N3fE9gcbSEqKdj1JEKfuFmDMkVnA3NOsVKCU=s0#w=90&amp;h=90">
+		</div>
+		<div class="ng-scope">
+			<strong>
+				Introducing Downloadables
+			</strong>
+		</div>
+		<p class="ng-scope">
+			Now you can download videos, transcripts, lesson notes,
+			and additional materials, all in one place.
+		</p>
+		<div class="text-right ng-scope">
+			<button class="btn btn-default" data-ng-click="next()">Next</button>
+		</div>
+	</div></div></div>
+</div></div></div>
+	</div>
+
+</div>
+
+<!-- Player sidebar -->
+<div class="col-xs-3 ng-scope">
+	<!-- the row gap gives the same gap as in other side panels -->
+	<div class="row row-gap-small">
+		<!-- Notification that the video is still uploading or updating -->
+		<div class="col-xs-12 ng-hide" data-ng-show="morsel._video_in_progress">
+			<p></p><h2>Note: Uploading In Progress</h2><p></p>
+			<p>This video is still uploading or being processed by youtube and is not quite ready to view yet.</p>
+		</div>
+	</div>
+
+	<!-- Discussions -->
+	<div data-viewer-discussions="" data-num-per-page="5"><!-- only show when course exists to enable c-none to be used -->
+<!-- Mr Torque rages: THIS IS NOT AN IDEAL USER EXPERIENCE AND SHOULD BE FIXED BY SINGLE PAGE APP! -->
+<div data-ng-show="course || examMode" class="">
+	<h3>
+		Ayuda
+	</h3>
+	<p data-ng-show="examMode" class="ng-hide">Discussions are disabled while taking an exam.</p>
+	<div data-ng-hide="examMode" class="">
+		<!-- For nanodegrees -->
+		<div data-ng-show="isNanodegreeAssociatedCourse || isNDorCA" class="ng-hide">
+			<p>
+				<a data-ng-href="http://discussions.udacity.com/categories" target="_blank" href="http://discussions.udacity.com/categories">Re-join the class discussion.</a>
+			</p>
+		</div>
+		<!-- For GT & GTPE Students -->
+		<div data-ng-show="affiliateExperienceId == 'gt'" class="ng-hide">
+			<p>
+				Re-join the class discussion on Piazza.
+			</p>
+			<p>
+				If you need help getting access, check the Course Overview page for your class on
+				<a href="//t-square.gatech.edu" target="_blank">T-Square.</a>
+			</p>
+		</div>
+
+		<div data-ng-hide="isNDorCA || isNanodegreeAssociatedCourse" class="">
+			<p>
+				<a data-ng-href="http://discussions.udacity.com/c/standalone-courses/intro-to-html-and-css" target="_blank" href="http://discussions.udacity.com/c/standalone-courses/intro-to-html-and-css">Discusión</a>
+			</p>
+
+			<p data-ng-show="isPaidCourse" class="ng-hide">
+				<a data-ng-href="http://discussions.udacity.com/categories" target="_blank" href="http://discussions.udacity.com/categories">Coaches Lounge</a>
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+
+	<!-- Report an issue -->
+	<div data-viewer-feedback=""><div class="row-gap-small">
+	<p><a href="" data-ng-click="showFeedbackDialog()">Reportar un problema</a></p>
+</div>
+
+<div class="ng-scope" data-modal-dialog="feedback"><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><span data-ng-if="!disableClose" class="ng-scope"><button type="button" aria-label="close" class="close hanging-close" data-ng-click="cornerClose({message:'cornerClose'})"></button></span><!-- end ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<div class="form-group text-center ng-scope ng-hide" data-ng-hide="formValidationResults.valid">
+		<!-- ngRepeat: (field, errorText) in formValidationResults.errorText -->
+	</div>
+	<div class="modal-header ng-binding ng-scope">
+		Report an issue for ""
+	</div>
+
+	<div class="modal-body ng-scope">
+		<div class="row">
+			<div class="col-xs-12 col-sm-10">
+				<!-- ngRepeat: option in feedbackOptions -->
+				<div class="radio">
+					<label>
+						<input type="radio" name="feedbackReason" data-ng-model="form.feedbackReason.value" data-ng-value="'other'" class="ng-pristine ng-valid" value="other">
+						<strong>Other</strong>.<span class="text-muted"> Describe the issue below</span>
+					</label>
+				</div>
+				<label for="feedback-explanation">Please Explain</label>
+				<textarea class="form-control ng-pristine ng-valid" id="feedback-explanation" data-ng-model="form.feedbackExplanation.value" style=""></textarea>
+			</div>
+			<div class="hidden-xs col-sm-2">
+				<img class="img-responsive" data-ng-src="//lh6.ggpht.com/pKx-eRzHw9M9hv8Fiejxj5GkUYQRfbzXe9sHndvm8gps3wEU46A-s4JzRn1rJOWlspwb1_YGpvqmQUNvnNwz=s140#w=494&amp;h=1061" alt="Sad robot" src="//lh6.ggpht.com/pKx-eRzHw9M9hv8Fiejxj5GkUYQRfbzXe9sHndvm8gps3wEU46A-s4JzRn1rJOWlspwb1_YGpvqmQUNvnNwz=s140#w=494&amp;h=1061">
+			</div>
+		</div>
+	</div>
+
+	<div class="modal-footer ng-scope">
+		<span class="text-muted pull-left">Your feedback will be used to improve our site</span>
+		<button class="btn btn-primary" data-ng-click="submitFeedback()">Submit report</button>
+	</div>
+</div></div></div></div>
+
+<div class="ng-scope" data-modal-dialog="feedback-confirmation"><div ng-show="isModalActive(name)" class="modal ng-hide"><div class="modal-backdrop"></div><div class="modal-dialog" data-ng-class="additionalClasses"><!-- ngIf: !disableClose --><span data-ng-if="!disableClose" class="ng-scope"><button type="button" aria-label="close" class="close hanging-close" data-ng-click="cornerClose({message:'cornerClose'})"></button></span><!-- end ngIf: !disableClose --><div class="modal-content col-xs-12">
+	<div class="modal-header ng-scope">
+		Thank you for your feedback
+	</div>
+
+	<div class="modal-body ng-scope">
+		Your feedback has been submitted.
+	</div>
+
+	<div class="modal-footer ng-scope">
+		<button class="btn btn-primary" data-ng-click="confirm()">Close</button>
+	</div>
+</div></div></div></div>
+</div>
+</div>
+</div>
+				</div>
+
+				<div class="row ng-hide" data-ng-show="canEditNotes">
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-xs-12">
+								<h2>Support Notes</h2>
+								<h4>Internal Only</h4>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6">
+								<div data-node-notes-editor="" data-field-name="'content_support_notes'" data-morsel="morsel" class="form-group ng-isolate-scope"><textarea class="input-block-level form-control ng-pristine ng-valid" data-ng-model="morsel[fieldName]" style="min-height: 100px"></textarea><button class="btn btn-sm btn-default" data-ng-click="saveNodeText()">Save Notes</button></div>
+							</div>
+							<div class="col-xs-6 ng-scope" data-markdown="morsel['content_support_notes']" data-mathquill="" data-watch="morsel['content_support_notes']" data-target=".mathquill" data-placeholder="No additional notes for this section"><div class="markdown-container ng-binding" data-ng-bind-html="compiledOutput"><span class="text-muted">No additional notes for this section</span></div></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+	</div>
+	<div class="row row-gap-huge"></div>
+</div>
+
+<!-- ngView:  -->
+
+
+
+
+
+
+
+
+<script type="text/ng-template" id="left_hand_nav.html">
+	<div class="col-xs-1 text-center left-hand-nav" data-ng-class="'current-nav-location-' + location">
+		<div data-ng-hide="courseKey == 'none'">
+			<div class="row row-gap-small" data-ng-show="semanticType=='Course'">
+				<div class="col-xs-12 nav-location-btn nav-location-dashboard">
+					<a data-ng-href="/course/progress#!/c-{{uriEncode(courseKey)}}"
+							class="text-swap-animation">
+						<span class="sprite-dashboard"></span><br>
+						Dashboard
+					</a>
+				</div>
+			</div>
+			<div class="row row-gap-small" data-ng-show="!semanticType || semanticType=='unknown' || semanticType =='Degree'">
+				<div class="col-xs-12 nav-location-btn nav-location-dashboard">
+					<span class="text-swap-animation">
+						<span class="sprite-dashboard sprite-dashboard-disabled"></span><br>
+						<span class="text-disabled">Dashboard</span>
+					</span>
+				</div>
+			</div>
+			<div class="row row-gap-small">
+				<div class="col-xs-12 nav-location-btn nav-location-viewer">
+					<a data-ng-href="/course/viewer#!/c-{{uriEncode(courseKey)}}">
+						<span class="sprite-viewer"></span>
+						<br>
+						Classroom
+					</a>
+				</div>
+			</div>
+			<div class="row row-gap-small">
+				<div class="col-xs-12 nav-location-btn nav-location-materials">
+					<a data-ng-href="/wiki/{{uriEncode(courseKey)}}" >
+						<span class="sprite-materials"></span><br>
+						Materials
+					</a>
+				</div>
+			</div>
+			<div class="row row-gap-small" data-ng-hide="limitedAccess">
+				<div class="col-xs-12 nav-location-btn nav-location-discussion">
+						<a data-ng-href="{{forumUrl}}" target="_blank" data-ng-show="showDiscussion"
+								class="text-swap-animation">
+							<span class="sprite-discussion"></span><br>
+							Discussion
+						</a>
+						<span data-ng-hide="showDiscussion" class="text-swap-animation">
+							<span class="sprite-discussion sprite-discussion-disabled"></span><br>
+							<span class="text-muted">Discussion</span>
+						</span>
+				</div>
+			</div>
+			<div class="row row-gap-small" data-ng-hide="limitedAccess || semanticType!='Course'">
+				<div class="col-xs-12 nav-location-btn nav-location-overview">
+					<a data-ng-href="/course/{{uriEncode(courseKey)}}">
+						<span class="sprite-overview"></span><br>
+						Overview
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+	
+</div>
+<div id="footer">
+	<div class="section section-standout section-slim">
+		<div class="container">
+			<div class="row row-gap-huge hidden-xs"></div>
+			<!-- NON-RESPONSIVE FOOTER -->
+			<div class="row hidden-xs hidden-sm">
+				
+				<div class="col-xs-3">
+                    <div class="row row-gap-small"></div>			
+                        <div class="row row-gap-small">
+                            <div class="col-xs-12 text-muted">
+                                Plataforma Nestle<br>
+                                © Nestle
+                            </div>
+                        </div>
+				    </div>
+			</div>
+
+			<!-- FOOTER FOR MOBILE ON RESPONSIVE PAGES -->
+			<div class="row visible-xs text-center">
+				<div class="col-xs-12">										
+                    <div class="row row-gap-small">
+                        <div class="col-xs-12 text-muted">
+                            Plataforma Nestle<br>
+                                © Nestle
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<!-- FOOTER FOR TABLET ON RESPONSIVE PAGES -->
+			<div class="row visible-sm">
+				<div class="col-sm-6">
+                    <div class="row row-gap-small"></div>					
+                        <div class="row row-gap-small">
+                            <div class="col-xs-12 text-muted">
+                                Plataforma Nestle<br>
+                                © Nestle
+                            </div>
+                        </div>
+				</div>
+			</div>
+			<div class="row row-gap-huge hidden-xs"></div>
+		</div>
+	</div>
+</div>
+</body></html>

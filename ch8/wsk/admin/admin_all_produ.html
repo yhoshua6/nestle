@@ -1,0 +1,178 @@
+<html data-ng-app="page.overview" data-enforce-browser="" class="ng-scope">
+<head>
+	<title>Administrador</title>
+	<meta charset="UTF-8">
+        <link rel="shortcut icon" href="https://www.nestle.com.mx/staticlocal/favicon.ico">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/letras.css">
+        <link rel="stylesheet" href="css/mmm.css">
+
+	<meta name="fragment" content="!">
+<style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0; padding: 0 }
+  #map_canvas { height: 100% }
+</style>
+<script type="text/javascript"
+  src=
+"http://maps.googleapis.com/maps/api/js?key=AIzaSyB1tbIAqN0XqcgTR1-FxYoVTVq6Is6lD98&sensor=false">
+</script>
+<script type="text/javascript">
+
+var locations = [
+  ['loan 1', 18.8984416, -96.9509741, 'address 1'],
+  ['loan 2', 18.8906088,-96.9504127, 'address 2'],
+  ['loan 3', 18.8939056,-96.9421996, 'address 3'],
+  ['loan 4', 18.8977809,-96.9404647, 'address 4'],
+  ['loan 5', 18.8923599,-96.9295583, 'address 5']
+  ];
+
+  function initialize() {
+
+    var myOptions = {
+      center: new google.maps.LatLng(18.8939056,-96.9421996),
+      zoom: 14,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+
+    };
+    var map = new google.maps.Map(document.getElementById("default"),
+        myOptions);
+
+    setMarkers(map,locations)
+
+  }
+
+
+
+  function setMarkers(map,locations){
+
+      var marker, i
+
+for (i = 0; i < locations.length; i++)
+ {  
+
+ var loan = locations[i][0]
+ var lat = locations[i][1]
+ var long = locations[i][2]
+ var add =  locations[i][3]
+
+ latlngset = new google.maps.LatLng(lat, long);
+
+  var marker = new google.maps.Marker({  
+          map: map, title: loan , position: latlngset  
+        });
+        map.setCenter(marker.getPosition())
+
+
+        var content = "Loan Number: " + loan +  '</h3>' + "Address: " + add     
+
+  var infowindow = new google.maps.InfoWindow()
+
+google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+        return function() {
+           infowindow.setContent(content);
+           infowindow.open(map,marker);
+        };
+    })(marker,content,infowindow)); 
+
+  }
+  }
+
+
+
+  </script>
+</head>
+<body data-ng-controller="siteFrame" data-modal-anti-scroll-helper data-ng-class="{'responsive': responsivenessIsEnabled, 'non-responsive': !responsivenessIsEnabled, 'modal-open': isModalActive()}" onload="initialize()">
+	<div id="page-content">
+		
+		<header class="navbar site-nav navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+							<a itemprop="brand" itemscope="" itemtype="http://schema.org/Brand" class="logo navbar-brand" href="/me" id="header-logo">
+								<img alt="Udacity Logo" src="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" srcset="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" style="width:213px;">
+							</a>
+
+					
+				</div>
+<nav class="navbar-collapse collapse text-center-xs" id="navbar-collapse" role="navigation">
+					
+						<!-- Logged out dropdowns -->
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="admin_login.html">Login</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+				            <li><a id="catalog" href="admin_rutas.html">Rutas</a></li>
+							</ul>
+                            <ul class="nav navbar-nav navbar-right">
+				            <li><a id="catalog" href="admin_procesos.html">Procesos</a></li>
+							</ul>
+                            <ul class="nav navbar-nav navbar-right">
+				            <li><a id="catalog" href="admin_puestos.html">Puestos</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+				            <li><a id="catalog" href="admin_asesores.html">Asesores</a></li>
+							</ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="admin_productos.html">Productos</a></li>
+                            </ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="admin_proveedores.html">Proveedores</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="admin_productores.html">Productores</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="admin_maps.html">Localizador</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="admin_index.html">Inicio</a></li>
+							</ul>
+				</nav>
+			</div>
+		</header>
+		
+<div data-responsiveness-enabler>
+    	<div class="col-xs-12 text-center">
+					<h2 class="h-slim">Visualizar Productores en el Mapa</h2>
+        </div>
+    <div class="container">
+        <div id="default" style="width:100%; height:100%"></div>
+    </div>
+</div>
+
+        
+<div id="footer">
+    <div class="section section-standout section-slim">
+        <div class="container">
+            <div class="row row-gap-huge hidden-xs"></div>
+            <div class="row hidden-xs hidden-sm">
+                <div class="col-xs-3">
+                <div class="row row-gap-small"></div>			
+                <div class="row row-gap-small"><div class="col-xs-12 text-muted">Plataforma Nestle<br>© Nestle</div></div>
+                </div>
+			</div>
+			<div class="row visible-xs text-center">
+				<div class="col-xs-12">										
+                <div class="row row-gap-small"><div class="col-xs-12 text-muted">Plataforma Nestle<br>© Nestle</div></div>
+				</div>
+			</div>
+			<div class="row visible-sm">
+				<div class="col-sm-6">
+                <div class="row row-gap-small"></div>					
+                <div class="row row-gap-small"><div class="col-xs-12 text-muted">Plataforma Nestle<br>© Nestle</div></div>
+				</div>
+			</div>
+			<div class="row row-gap-huge hidden-xs"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html data-ng-app="page.overview" data-enforce-browser=""   class="ng-scope">
+<head>
+    <title>Administrador</title>
+        <link rel="stylesheet" type="text/css" href="css/letras.css">
+        <link rel="shortcut icon" href="https://www.nestle.com.mx/staticlocal/favicon.ico">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/mmm.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="fragment" content="!">
+</head>
+    
+<body data-ng-controller="siteFrame" data-modal-anti-scroll-helper data-ng-class="{'responsive': responsivenessIsEnabled, 'non-responsive': !responsivenessIsEnabled, 'modal-open': isModalActive()}">
+    <header class="navbar site-nav navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+		  <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+					
+              <a itemprop="brand" itemscope="" itemtype="http://schema.org/Brand" class="logo navbar-brand" href="/me" id="header-logo">
+                  <meta itemprop="logo" content="https://lh6.ggpht.com/pXxnDpPZHXnKqBqwvI4cmhsztuM23lbmy0o5zVEZTfXQR69u5Nlx7hfxcCOGZP_Yp_3HwpK3zVAtXejMAg=s0">
+                  <img alt="Udacity Logo" src="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" srcset="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" style="width:213px;">
+              </a>
+            </div>
+            <nav class="navbar-collapse collapse text-center-xs" id="navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_login.html">Login</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="catalog" href="admin_rutas.html">Rutas</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="catalog" href="admin_procesos.html">Procesos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="catalog" href="admin_puestos.html">Puestos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="catalog" href="admin_asesores.html">Asesores</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_productos.html">Productos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_proveedores.html">Proveedores</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_productores.html">Productores</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_maps.html">Localizador</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div data-responsiveness-enabler>
+    
+    <div class="container">
+        <div class="col-xs-9 ">
+					<h2 class="h-slim">Productos</h2><i style="font-size: 80px; color: #307699;"  class="fa fa-cubes"></i>
+        </div>
+            <div class="col-md-3"><br/>
+            <a type="button" class="btn btn-success btn-lg" href="admin_new_producto.html">Agregar nuevo</a><br/><br/><br/>
+            </div>
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Unidad de medida</th>
+                        <th>Precio</th>
+                        <th>Foto</th>
+                        <th colspan="2">Acción</th>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>Gerber</td>
+                        <td>Gerber sabor manzana</td>
+                        <td>Frascos</td>
+                        <td>$10</td>
+                        <td><img style="width: 40px;" src="img/gerber.jpg"></td>
+   <td><a href="admin_edit_producto.html"><i style="color:green; font-size:30px;" class="fa fa-pencil"></i></a></td>
+                        <td><a  data-toggle="modal" data-target="#myModal"><i style="color:#D6210F; font-size:30px;" class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>Gerber</td>
+                        <td>Gerber sabor manzana</td>
+                        <td>Frascos</td>
+                        <td>$10</td>
+                        <td><img style="width: 40px;" src="img/gerber.jpg"></td>
+   <td><a href="admin_edit_producto.html"><i style="color:green; font-size:30px;" class="fa fa-pencil"></i></a></td>
+                        <td><a  data-toggle="modal" data-target="#myModal"><i style="color:#D6210F; font-size:30px;" class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>Gerber</td>
+                        <td>Gerber sabor manzana</td>
+                        <td>Frascos</td>
+                        <td>$10</td>
+                        <td><img style="width: 40px;" src="img/gerber.jpg"></td>
+   <td><a href="admin_edit_producto.html"><i style="color:green; font-size:30px;" class="fa fa-pencil"></i></a></td>
+                        <td><a  data-toggle="modal" data-target="#myModal"><i style="color:#D6210F; font-size:30px;" class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>Gerber</td>
+                        <td>Gerber sabor manzana</td>
+                        <td>Frascos</td>
+                        <td>$10</td>
+                        <td><img style="width: 40px;" src="img/gerber.jpg"></td>
+   <td><a href="admin_edit_producto.html"><i style="color:green; font-size:30px;" class="fa fa-pencil"></i></a></td>
+                        <td><a  data-toggle="modal" data-target="#myModal"><i style="color:#D6210F; font-size:30px;" class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>Gerber</td>
+                        <td>Gerber sabor manzana</td>
+                        <td>Frascos</td>
+                        <td>$10</td>
+                        <td><img style="width: 40px;" src="img/gerber.jpg"></td>
+   <td><a href="admin_edit_producto.html"><i style="color:green; font-size:30px;" class="fa fa-pencil"></i></a></td>
+                        <td><a  data-toggle="modal" data-target="#myModal"><i style="color:#D6210F; font-size:30px;" class="fa fa-trash"></i></a></td>
+                    </tr>
+                </table>
+                <div class="col-md-3 col-sm-offset-9">
+                <nav>
+                  <ul class="pagination">
+                    <li>
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div id="footer">
+    <div class="section section-standout section-slim">
+        <div class="container">
+            <div class="row row-gap-huge hidden-xs"></div>
+            <div class="row hidden-xs hidden-sm">
+                <div class="col-xs-3">
+                <div class="row row-gap-small"></div>			
+                <div class="row row-gap-small"><div class="col-xs-12 text-muted">Plataforma Nestle<br>© Nestle</div></div>
+                </div>
+			</div>
+			<div class="row visible-xs text-center">
+				<div class="col-xs-12">										
+                <div class="row row-gap-small"><div class="col-xs-12 text-muted">Plataforma Nestle<br>© Nestle</div></div>
+				</div>
+			</div>
+			<div class="row visible-sm">
+				<div class="col-sm-6">
+                <div class="row row-gap-small"></div>					
+                <div class="row row-gap-small"><div class="col-xs-12 text-muted">Plataforma Nestle<br>© Nestle</div></div>
+				</div>
+			</div>
+			<div class="row row-gap-huge hidden-xs"></div>
+		</div>
+	</div>
+</div>
+    
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="h-slim">Eliminar</h2>
+            </div>
+            <div class="modal-body">
+              <p>¿Estas seguro que quieres eliminar?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Eliminar</button>
+              <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

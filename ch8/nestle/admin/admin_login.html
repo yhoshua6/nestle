@@ -1,0 +1,137 @@
+<html data-ng-app="page.overview" data-enforce-browser=""   class="ng-scope">
+<head>
+    <title>Administrador</title>
+        <link rel="stylesheet" type="text/css" href="css/letras.css">
+        <link rel="shortcut icon" href="https://www.nestle.com.mx/staticlocal/favicon.ico">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/mmm.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="fragment" content="!">
+</head>
+    
+<body data-ng-controller="siteFrame" data-modal-anti-scroll-helper data-ng-class="{'responsive': responsivenessIsEnabled, 'non-responsive': !responsivenessIsEnabled, 'modal-open': isModalActive()}">
+    <header class="navbar site-nav navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+		  <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+					
+              <a itemprop="brand" itemscope="" itemtype="http://schema.org/Brand" class="logo navbar-brand" href="/me" id="header-logo">
+                  <img alt="Nestle Logo" src="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" srcset="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" style="width:213px;">
+              </a>
+            </div>
+            <nav class="navbar-collapse collapse text-center-xs" id="navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_login.html">Login</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="catalog" href="admin_rutas.html">Rutas</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="catalog" href="admin_procesos.html">Procesos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="catalog" href="admin_puestos.html">Puestos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="catalog" href="admin_asesores.html">Asesores</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_productos.html">Productos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_proveedores.html">Proveedores</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_productores.html">Productores</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_maps.html">Localizador</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin_index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+		
+<div data-responsiveness-enabler>
+<div class="banner banner-header course-overview-banner ng-scope" data-ng-controller="overviewPage">
+	<div class="container banner-content" style="background-image: url(http://lh5.ggpht.com/hsbaPB2ONN_pDAljOlO6i5gWjneQcRnVnn5j4vmYqoqkASy2gcfKnUSogEmFcXAVwZFx1ZL2Pen-toR1zQNS=s0#w=4680&amp;h=968)">
+		<div class="row course-header-pane">
+			<div class="col-xs-12">
+
+				<div class="row row-gap-small">
+					<div class="col-xs-8 col-xs-offset-2 text-center">
+						<h1 class="course-header-title h-slim"><br/>
+							Administración del sitio nestle
+						</h1>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 text-center">
+						<span class="h-slim course-header-subtitle h2">
+							Inicie aquí<br/>
+						</span>
+					</div>
+				</div>
+			</div>
+        </div>
+	</div>
+</div>
+	<div class="container">
+     <div class="col-md-4 col-md-offset-4">
+      <form class="form-signin"><br/><br/>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus></input>
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required></input>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Recuerdame</input>
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button><br/><br/>
+      </form>
+    </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="section section-standout section-slim">
+        <div class="container">
+            <div class="row row-gap-huge hidden-xs"></div>
+            <div class="row hidden-xs hidden-sm">
+                <div class="col-xs-3">
+                <div class="row row-gap-small"></div>			
+                <div class="row row-gap-small"><div class="col-xs-12 text-muted">Plataforma Nestle<br>© Nestle</div></div>
+                </div>
+			</div>
+			<div class="row visible-xs text-center">
+				<div class="col-xs-12">										
+                <div class="row row-gap-small"><div class="col-xs-12 text-muted">Plataforma Nestle<br>© Nestle</div></div>
+				</div>
+			</div>
+			<div class="row visible-sm">
+				<div class="col-sm-6">
+                <div class="row row-gap-small"></div>					
+                <div class="row row-gap-small"><div class="col-xs-12 text-muted">Plataforma Nestle<br>© Nestle</div></div>
+				</div>
+			</div>
+			<div class="row row-gap-huge hidden-xs"></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,515 @@
+<html data-ng-app="page.overview" data-enforce-browser="" class="ng-scope">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<title>Aula Virtual Nestlé</title>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="https://www.nestle.com.mx/staticlocal/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">    
+		<link rel="stylesheet" type="text/css" href="css/udacity.min.css">
+        <link rel="stylesheet" type="text/css" href="css/udacity.src.css">
+	<link rel="stylesheet" href="css/homepage.min.css" type="text/css">
+
+</head>
+<body data-ng-controller="siteFrame" data-modal-anti-scroll-helper data-ng-class="{'responsive': responsivenessIsEnabled, 'non-responsive': !responsivenessIsEnabled, 'modal-open': isModalActive()}">
+	<div id="page-content">
+		
+		<header class="navbar site-nav navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+							<a itemprop="brand" itemscope="" itemtype="http://schema.org/Brand" class="logo navbar-brand" href="/me" id="header-logo">
+								<meta itemprop="logo" content="https://lh6.ggpht.com/pXxnDpPZHXnKqBqwvI4cmhsztuM23lbmy0o5zVEZTfXQR69u5Nlx7hfxcCOGZP_Yp_3HwpK3zVAtXejMAg=s0">
+								<img alt="Udacity Logo" src="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" srcset="https://www.dropbox.com/s/tu5s95k5o92ensu/logo.png?dl=1" style="width:213px;">
+							</a>
+
+					
+				</div>
+
+<nav class="navbar-collapse collapse text-center-xs" id="navbar-collapse" role="navigation">
+					
+						<!-- Logged out dropdowns -->
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="login.html">Ingresar</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="content.html">Contenido</a>
+                                </li>
+                            </ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="course.html">Curso</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="dashboard.html">Clase</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="user.html">Usuario</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="index.html">Inicio</a>
+								</li>
+							</ul>
+				</nav>
+			</div>
+		</header>
+		
+<div data-responsiveness-enabler>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6">
+			<h1 class="h-slim-top">Catalogo de Cursos</h1>
+		</div>
+		<div class="col-xs-6" data-ng-show="loadingComplete">
+			<div class="row row-gap-small">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<input type="text" placeholder="Buscar" data-ng-model="fullTextSearch.query" class="form-control ng-pristine ng-valid">
+						<span class="input-group-addon">
+							<i class="fa fa-search"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row row-gap-medium" data-ng-show="loadingComplete">
+		<div class="col-xs-3">
+
+			<!-- Categories -->
+			<div class="row facet-categories">
+				<div class="col-xs-12">
+                    <h3 class="h-slim">Categoria</h3>
+					<form role="form" class="ng-pristine ng-valid">
+						<!-- ngRepeat: category in tracks --><div class="row ng-scope active" data-ng-repeat="category in tracks" data-ng-class="{active: category === activeCategory}">
+							<div class="col-xs-12">
+								<p class="form-control-static">
+									<!-- Force the clickable region to be the entire width of the container -->
+									<a data-ng-href="all" style="display: block; width: 100%;" class="ng-binding" href="all">Todo</a>
+								</p>
+							</div>
+						</div><!-- end ngRepeat: category in tracks --><div class="row ng-scope" data-ng-repeat="category in tracks" data-ng-class="{active: category === activeCategory}">
+							<div class="col-xs-12">
+								<p class="form-control-static">
+									<!-- Force the clickable region to be the entire width of the container -->
+									<a data-ng-href="data-science" style="display: block; width: 100%;" class="ng-binding" href="data-science">Tecnologías de la información</a>
+								</p>
+							</div>
+						</div><!-- end ngRepeat: category in tracks --><div class="row ng-scope" data-ng-repeat="category in tracks" data-ng-class="{active: category === activeCategory}">
+							<div class="col-xs-12">
+								<p class="form-control-static">
+									<!-- Force the clickable region to be the entire width of the container -->
+									<a data-ng-href="web-development" style="display: block; width: 100%;" class="ng-binding" href="web-development">Negocios</a>
+								</p>
+							</div>
+						</div><!-- end ngRepeat: category in tracks --><div class="row ng-scope" data-ng-repeat="category in tracks" data-ng-class="{active: category === activeCategory}">
+							<div class="col-xs-12">
+								<p class="form-control-static">
+									<!-- Force the clickable region to be the entire width of the container -->
+									<a data-ng-href="software-engineering" style="display: block; width: 100%;" class="ng-binding" href="software-engineering">Contabilidad</a>
+								</p>
+							</div>
+						</div><!-- end ngRepeat: category in tracks --><div class="row ng-scope" data-ng-repeat="category in tracks" data-ng-class="{active: category === activeCategory}">
+							<div class="col-xs-12">
+								<p class="form-control-static">
+									<!-- Force the clickable region to be the entire width of the container -->
+									<a data-ng-href="android" style="display: block; width: 100%;" class="ng-binding" href="android">Ética </a>
+								</p>
+							</div>
+						</div><!-- end ngRepeat: category in tracks --><div class="row ng-scope" data-ng-repeat="category in tracks" data-ng-class="{active: category === activeCategory}">
+							<div class="col-xs-12">
+								<p class="form-control-static">
+									<!-- Force the clickable region to be the entire width of the container -->
+									<a data-ng-href="ios" style="display: block; width: 100%;" class="ng-binding" href="ios">Agricultura</a>
+								</p>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-9 course-list">
+			<div class="row ng-hide" data-ng-show="fallback &amp;&amp; courses.length">
+				<div class="col-xs-12">
+					<h2>Nuestros Cursos</h2>
+				</div>
+			</div>
+			
+			<!-- Category banner for the active category -->
+			<!-- ngIf: activeCategory['display_title'] && !fallback -->
+			<!-- ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/android-developer-nanodegree--nd801" href="/course/android-developer-nanodegree--nd801">
+			<img style="width:100%" data-ng-src="https://arena.yourlondonlibrary.net/documents/44130/44229/book+pc.png/22ce1249-8937-4bc2-bfff-838364252bdd?t=1428136571804" alt="" class="img-responsive img-bordered" src="https://arena.yourlondonlibrary.net/documents/44130/44229/book+pc.png/22ce1249-8937-4bc2-bfff-838364252bdd?t=1428136571804">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/android-developer-nanodegree--nd801" class="ng-binding" href="/course/android-developer-nanodegree--nd801">Introducción a las TIC´s</a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="ng-hide">
+					<span class="h4">Clase</span>
+					<strong class="ng-binding"></strong>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-1" data-ng-class="levelClass()"></span>
+					Básico
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">En este curso aprenderás conceptos básicos de tecnología, aprenderás: Excel, Word, PPT, Internet, correo electrónico, redes sociales.</div>
+		<p data-ng-show="course['affiliates'][0]" class="ng-hide">
+			<strong class="ng-binding">
+				
+			</strong>
+		</p>
+	</div>
+</div>
+</div><!-- end ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/front-end-web-developer-nanodegree--nd001" href="/course/front-end-web-developer-nanodegree--nd001">
+			<img data-ng-src="http://congresorh.com/wp-content/uploads/2014/10/contenedor-iconos_256-copy.png" alt="" class="img-responsive img-bordered" src="http://congresorh.com/wp-content/uploads/2014/10/contenedor-iconos_256-copy.png">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/front-end-web-developer-nanodegree--nd001" class="ng-binding" href="/course/front-end-web-developer-nanodegree--nd001">Ética empresarial</a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="ng-hide">
+					<span class="h4">Clase</span>
+					<strong class="ng-binding"></strong>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-2" data-ng-class="levelClass()"></span>
+					Intermedio
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">En este curso desarrollara al máximo la ética y la ciudadanía en un concepto empresarial, aprenderás como la ética tiene una gran importancia en el mundo actual.</div>
+		<p data-ng-show="course['affiliates'][0]" class="ng-hide">
+			<strong class="ng-binding">
+			</strong>
+		</p>
+	</div>
+</div>
+</div><!-- end ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/tech-entrepreneur-nanodegree--nd007" href="/course/tech-entrepreneur-nanodegree--nd007">
+			<img data-ng-src="http://studiomarketing.es/wp-content/uploads/Iconos-Servicios.png" alt="" class="img-responsive img-bordered" src="http://studiomarketing.es/wp-content/uploads/Iconos-Servicios.png">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/tech-entrepreneur-nanodegree--nd007" class="ng-binding" href="/course/tech-entrepreneur-nanodegree--nd007">Elaboración de Plan de Negocios</a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="ng-hide">
+					<span class="h4">Proyecto</span>
+					<strong class="ng-binding"></strong>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-2" data-ng-class="levelClass()"></span>
+					Intermedio
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">En este curso podrás desarrollar un plan de negocios apto para ti, atrévete a descubrirlo.</div>
+		<p data-ng-show="course['affiliates'][0]" class="ng-hide">
+			<strong class="ng-binding">
+			</strong>
+		</p>
+	</div>
+</div>
+</div><!-- end ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/data-analyst-nanodegree--nd002" href="/course/data-analyst-nanodegree--nd002">
+			<img data-ng-src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-4/256/family-icon.png" alt="" class="img-responsive img-bordered" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-4/256/family-icon.png">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/data-analyst-nanodegree--nd002" class="ng-binding" href="/course/data-analyst-nanodegree--nd002">Empresas familiares</a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="ng-hide">
+					<span class="h4">Proyecto</span>
+					<strong class="ng-binding"></strong>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-2" data-ng-class="levelClass()"></span>
+					Intermedio
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">Desarrolla y mejora tu empresa familiar, estamos para ayudarte.</div>
+		<p data-ng-show="course['affiliates'][0]" class="ng-hide">
+			<strong class="ng-binding">
+			</strong>
+		</p>
+	</div>
+</div>
+</div><!-- end ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/full-stack-web-developer-nanodegree--nd004" href="/course/full-stack-web-developer-nanodegree--nd004">
+			<img style="width:100%;" data-ng-src="http://premios.mybike.com.co/wp-content/uploads/2015/07/ENCUESTA-PREMIOS-MY-BIKE.png" alt="" class="img-responsive img-bordered" src="http://premios.mybike.com.co/wp-content/uploads/2015/07/ENCUESTA-PREMIOS-MY-BIKE.png">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/full-stack-web-developer-nanodegree--nd004" class="ng-binding" href="/course/full-stack-web-developer-nanodegree--nd004">Evaluación de proyectos</a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="ng-hide">
+					<span class="h4">Clase</span>
+					<strong class="ng-binding"></strong>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-1" data-ng-class="levelClass()"></span>
+					Básico
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">Con este curso aprenderás a evaluar un proyecto, a saber si el mismo es rentable o no.</div>
+		<p data-ng-show="course['affiliates'][0]" class="ng-hide">
+			<strong class="ng-binding"></strong>
+		</p>
+	</div>
+</div>
+</div><!-- end ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/intro-to-programming-nanodegree--nd000" href="/course/intro-to-programming-nanodegree--nd000">
+			<img data-ng-src="http://www.technikcoats.com.ar/sustentabilidad.png" alt="" class="img-responsive img-bordered" src="http://www.technikcoats.com.ar/sustentabilidad.png">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/intro-to-programming-nanodegree--nd000" class="ng-binding" href="/course/intro-to-programming-nanodegree--nd000">Sustentabilidad </a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="ng-hide">
+					<span class="h4">Clase</span>
+					<strong class="ng-binding"></strong>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-1" data-ng-class="levelClass()"></span>
+					Básico
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">Aprende a desarrollar proyectos sustentables para tú comunidad.</div>
+		<p data-ng-show="course['affiliates'][0]" class="ng-hide">
+			<strong class="ng-binding">
+			</strong>
+		</p>
+	</div>
+</div>
+</div><!-- end ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/ios-developer-nanodegree--nd003" href="/course/ios-developer-nanodegree--nd003">
+			<img data-ng-src="http://www.orckestra.com/~/media/images/short_intro/illustration/ecosystem_p1/strategic_services_page/e-commerce-png.png?h=277&la=en&w=300&hash=E027D15F00A3BE87953743E6E5F4879A738BB91F" alt="" class="img-responsive img-bordered" src="http://www.orckestra.com/~/media/images/short_intro/illustration/ecosystem_p1/strategic_services_page/e-commerce-png.png?h=277&la=en&w=300&hash=E027D15F00A3BE87953743E6E5F4879A738BB91F">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/ios-developer-nanodegree--nd003" class="ng-binding" href="/course/ios-developer-nanodegree--nd003">Comercialización</a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="ng-hide">
+					<span class="h4">Clase</span>
+					<strong class="ng-binding"></strong>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-2" data-ng-class="levelClass()"></span>
+					Intermedio
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">Aprende a comercializar tus productos de una manera más fácil y eficiente.</div>
+		<p data-ng-show="course['affiliates'][0]" class="ng-hide">
+			<strong class="ng-binding">
+			</strong>
+		</p>
+	</div>
+</div>
+</div><!-- end ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/career-advisor-front-end-web-developer--ca001" href="/course/career-advisor-front-end-web-developer--ca001">
+			<img data-ng-src="http://www.asistirmedicina.com/gestion/iconos/libro-cobranzas.png" alt="" class="img-responsive img-bordered" src="http://www.asistirmedicina.com/gestion/iconos/libro-cobranzas.png">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/career-advisor-front-end-web-developer--ca001" class="ng-binding" href="/course/career-advisor-front-end-web-developer--ca001">Registro contable</a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="ng-hide">
+					<span class="h4">Clase</span>
+					<strong class="ng-binding"></strong>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-2" data-ng-class="levelClass()"></span>
+					Intermedio
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">Aprende a llevar un análisis de la rentabilidad y contabilidad de tu propio negocio.</div>
+		<p data-ng-show="course['affiliates'][0]" class="ng-hide">
+			<strong class="ng-binding">
+			</strong>
+		</p>
+	</div>
+</div>
+</div><!-- end ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/android-development-for-beginners--ud837" href="/course/android-development-for-beginners--ud837">
+			<img style="width:80%;" data-ng-src="http://www.stemexpo.org/logos/Icon.Technology.1710x1710.png" alt="" class="img-responsive img-bordered" src="http://www.stemexpo.org/logos/Icon.Technology.1710x1710.png">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/android-development-for-beginners--ud837" class="ng-binding" href="/course/android-development-for-beginners--ud837">Herramientas tecnológicas</a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="">
+					<span class="h4">Clase con proyecto</span>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-2" data-ng-class="levelClass()"></span>
+					Intermedio
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">Aprende nuevas habilidades computacionales, vive la tecnología a otro nivel.</div>
+		<p data-ng-show="course['affiliates'][0]" class="">
+			<strong class="ng-binding">
+            </strong>
+		</p>
+	</div>
+</div>
+</div><!-- end ngRepeat: course in filterCourses(courses) track by course['key'] --><div data-course-summary="" data-ng-repeat="course in filterCourses(courses) track by course['key']" data-course="course" data-affiliate-map="affiliateMap" class="ng-scope ng-isolate-scope"><div class="row row-gap-medium">
+	<div class="col-xs-3">
+		<a data-ng-href="/course/how-to-create-anything-in-android--ud802" href="/course/how-to-create-anything-in-android--ud802">
+			<img data-ng-src="https://pbs.twimg.com/profile_images/1932167208/logo.png" alt="" class="img-responsive img-bordered" src="https://pbs.twimg.com/profile_images/1932167208/logo.png">
+		</a>
+	</div>
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-8">
+				<h3 class="h-slim">
+					<a data-ng-href="/course/how-to-create-anything-in-android--ud802" class="ng-binding" href="/course/how-to-create-anything-in-android--ud802">Nutrición y Protección vegetal</a>
+				</h3>
+				<div data-ng-show="course['project_name']" class="ng-hide">
+					<span class="h4">Clase</span>
+					<strong class="ng-binding"></strong>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span class="caption text-right ng-binding">
+					<span class="icon-level icon-level-1" data-ng-class="levelClass()"></span>
+					Básico
+				</span>
+			</div>
+		</div>
+		<div class="ng-binding">Desarrolla habilidades para la protección vegetal y aprende sobre nutrición.</div>
+		<p data-ng-show="course['affiliates'][0]" class="ng-hide">
+			<strong class="ng-binding">
+			</strong>
+		</p>
+	</div>
+</div>
+</div>
+</div>
+<div id="footer">
+	<div class="section section-standout section-slim">
+		<div class="container">
+			<div class="row row-gap-huge hidden-xs"></div>
+			<!-- NON-RESPONSIVE FOOTER -->
+			<div class="row hidden-xs hidden-sm">
+				
+				<div class="col-xs-3">
+                    <div class="row row-gap-small"></div>			
+                        <div class="row row-gap-small">
+                            <div class="col-xs-12 text-muted">
+                                Plataforma Nestle<br>
+                                © Nestle
+                            </div>
+                        </div>
+				    </div>
+			</div>
+
+			<!-- FOOTER FOR MOBILE ON RESPONSIVE PAGES -->
+			<div class="row visible-xs text-center">
+				<div class="col-xs-12">										
+                    <div class="row row-gap-small">
+                        <div class="col-xs-12 text-muted">
+                            Plataforma Nestle<br>
+                                © Nestle
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<!-- FOOTER FOR TABLET ON RESPONSIVE PAGES -->
+			<div class="row visible-sm">
+				<div class="col-sm-6">
+                    <div class="row row-gap-small"></div>					
+                        <div class="row row-gap-small">
+                            <div class="col-xs-12 text-muted">
+                                Plataforma Nestle<br>
+                                © Nestle
+                            </div>
+                        </div>
+				</div>
+			</div>
+			<div class="row row-gap-huge hidden-xs"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
