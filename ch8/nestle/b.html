@@ -5,7 +5,8 @@
         <link rel="shortcut icon" href="https://www.nestle.com.mx/staticlocal/favicon.ico">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/mmm.css">
+        <link rel="stylesheet" type="text/css" href="css/udacity.min.css">
+        <link rel="stylesheet" type="text/css" href="css/udacity.src.css">
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -31,81 +32,310 @@
               </a>
             </div>
             <nav class="navbar-collapse collapse text-center-xs" id="navbar-collapse" role="navigation">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="admin_login.html">Login</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a id="catalog" href="admin_rutas.html">Rutas</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a id="catalog" href="admin_procesos.html">Procesos</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a id="catalog" href="admin_puestos.html">Puestos</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a id="catalog" href="admin_asesores.html">Asesores</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="admin_productos.html">Productos</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="admin_proveedores.html">Proveedores</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="admin_productores.html">Productores</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="admin_maps.html">Localizador</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="admin_index.html">Inicio</a></li>
-                </ul>
+                <!-- Logged out dropdowns -->
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="login.html">Registro</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="content.html">Contenido</a>
+                                </li>
+                            </ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="course.html">Curso</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="dashboard.html">Clase</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="user.html">Usuario</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="index.html">Inicio</a>
+								</li>
+							</ul>
             </nav>
         </div>
     </header>
 				
 <div data-responsiveness-enabler>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-9 ">
-					<h2 class="h-slim">Ingresa un Producto</h2>
-        </div>
-            <div class="col-md-3"><br/>
-            <a type="button" class="btn btn-info btn-lg" href="admin_crud_productor.html">Editar Datos</a><br/><br/><br/>
-            </div>
-            <div class="col-md-6">
-                <form>
-                  <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" class="form-control" id="name" placeholder="Nombre">
-                  </div>
-                    <div class="form-group">
-                    <label for="descripcion">Descripción</label>
-                        <textarea rows="1" type="text" class="form-control" id="descripcion" placeholder="Describe el producto aquí"></textarea>
-                  </div>
-                    <div class="form-group">
-                    <label for="medida">Unidad de medida</label>
-                    <input type="text" class="form-control" id="medida" placeholder="Unidad de medida">
-                  </div>
-            </div>
-            <div class="col-md-6">
-                <label for="precio">Precio</label>
-                <div class="form-group">
-                        <div class="input-group">
-                          <div class="input-group-addon">$</div>
-                          <input type="text" class="form-control" id="precio" placeholder="Precio">
+   <div class="row">
+		<div class="col-xs-12">
+			<!-- ngView:  --><div data-ng-view="" class="ng-scope"><div class="container ng-scope" data-responsiveness-enabler="">
+
+	<div class="row" ng-show="!home.loadingMessage">
+		<div class="col-sm-8 col-sm-offset-2 text-center" ng-class="{'col-sm-offset-2': !home.isNdStudent, 'text-center': !home.isNdStudent}">
+			<!-- ngIf: home.isEnrolledOrGraduatedInAnyCourses() --><h2 class="heading-color ng-binding ng-scope" ng-if="home.isEnrolledOrGraduatedInAnyCourses()">
+				<span class="font-light">Bienvenido,</span> Josué
+			</h2><!-- end ngIf: home.isEnrolledOrGraduatedInAnyCourses() -->
+			<!-- ngIf: !home.isEnrolledOrGraduatedInAnyCourses() -->
+			<div class="row row-gap-small"></div>
+		</div>
+	</div>
+
+	<div class="row no-margin" ng-show="!home.loadingMessage">
+		<!-- ngIf: home.isNdStudent -->
+
+		<div class="col-sm-8 col-sm-pull-4 col-sm-offset-6" ng-class="{'col-sm-offset-6': !home.isNdStudent}">
+			<div class="panel row course-panel ng-scope" ng-repeat="course in home.courses | isFreeCourse track by $index">
+				<div class="course-card theme-ud304" course="course">
+    <div class="row">
+        <div class="col-xs-12" data-ng-click="openCourseIfFreeCourse(course)">
+            <div class="no-pad panel-header free-course-panel-header" data-ng-class="{'free-course-panel-header': isFreeCourse}">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-2 text-center course-icon-container">
+                            <!-- ngIf: isNanodegree || isCareer -->
+                            <!-- ngIf: isPaidCourse || isFreeCourse --><div ng-if="isPaidCourse || isFreeCourse" class="ng-scope">
+                                <!-- ngIf: getIconForCourse(course) --><img class="course-icon ng-scope" ng-if="getIconForCourse(course)" ng-src="https://lh6.ggpht.com/KHjK8i_BBLXVYAverR73RvYt06rPk7JnKQWcUIyzMYUnVSPL_zC_asTuM-e69zkibagGRnC5u-bB04nPTQ=s250#w=1278&amp;h=786" src="https://lh6.ggpht.com/KHjK8i_BBLXVYAverR73RvYt06rPk7JnKQWcUIyzMYUnVSPL_zC_asTuM-e69zkibagGRnC5u-bB04nPTQ=s250#w=1278&amp;h=786"><!-- end ngIf: getIconForCourse(course) -->
+                            </div><!-- end ngIf: isPaidCourse || isFreeCourse -->
                         </div>
+                        <div class="col-xs-9">
+                            <div class="large-text nanodegree-title ng-binding">
+                                Computación
+                            </div>
+                            <!-- ngIf: isNanodegree && !course.graduated -->
+                            <!-- ngIf: isCareer && !course.graduated -->
+                            <!-- ngIf: isPaidCourse && !course.graduated -->
+                            <!-- ngIf: isFreeCourse && !course.graduated --><div data-ng-if="isFreeCourse &amp;&amp; !course.graduated" class="ng-scope">
+                                <div class="small-text">Course Material</div>
+                            </div><!-- end ngIf: isFreeCourse && !course.graduated -->
+                            <!-- ngIf: course.graduated -->
+                        </div>
+                        <!-- ngIf: isFreeCourse && !course.graduated --><span data-ng-if="isFreeCourse &amp;&amp; !course.graduated" class="play-circle pull-right ng-scope">
+                            <i class="glyphicon glyphicon-play-circle"></i>
+                        </span><!-- end ngIf: isFreeCourse && !course.graduated -->
                     </div>
-                        <div class="form-group">
-                          <label for="imgp">Imagen del producto</label>
-                          <input type="file" id="imgp" name="imgp" required/><br>
+                </div>
+            </div>
+        </div>
+		<div class="col-xs-12" data-ng-click="openCourseIfFreeCourse(course)">
+            <div class="no-pad panel-header free-course-panel-header" data-ng-class="{'free-course-panel-header': isFreeCourse}">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-2 text-center course-icon-container">
+                            <!-- ngIf: isNanodegree || isCareer -->
+                            <!-- ngIf: isPaidCourse || isFreeCourse --><div ng-if="isPaidCourse || isFreeCourse" class="ng-scope">
+                                <!-- ngIf: getIconForCourse(course) --><img class="course-icon ng-scope" ng-if="getIconForCourse(course)" ng-src="https://lh6.ggpht.com/KHjK8i_BBLXVYAverR73RvYt06rPk7JnKQWcUIyzMYUnVSPL_zC_asTuM-e69zkibagGRnC5u-bB04nPTQ=s250#w=1278&amp;h=786" src="https://lh6.ggpht.com/KHjK8i_BBLXVYAverR73RvYt06rPk7JnKQWcUIyzMYUnVSPL_zC_asTuM-e69zkibagGRnC5u-bB04nPTQ=s250#w=1278&amp;h=786"><!-- end ngIf: getIconForCourse(course) -->
+                            </div><!-- end ngIf: isPaidCourse || isFreeCourse -->
                         </div>
-                <button type="submit" class="btn btn-success btn-lg">Submit</button>
-                </form>
+                        <div class="col-xs-9">
+                            <div class="large-text nanodegree-title ng-binding">
+                                Geografía
+                            </div>
+                            <!-- ngIf: isNanodegree && !course.graduated -->
+                            <!-- ngIf: isCareer && !course.graduated -->
+                            <!-- ngIf: isPaidCourse && !course.graduated -->
+                            <!-- ngIf: isFreeCourse && !course.graduated --><div data-ng-if="isFreeCourse &amp;&amp; !course.graduated" class="ng-scope">
+                                <div class="small-text">Course Material</div>
+                            </div><!-- end ngIf: isFreeCourse && !course.graduated -->
+                            <!-- ngIf: course.graduated -->
+                        </div>
+                        <!-- ngIf: isFreeCourse && !course.graduated --><span data-ng-if="isFreeCourse &amp;&amp; !course.graduated" class="play-circle pull-right ng-scope">
+                            <i class="glyphicon glyphicon-play-circle"></i>
+                        </span><!-- end ngIf: isFreeCourse && !course.graduated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="col-xs-12" data-ng-click="openCourseIfFreeCourse(course)">
+            <div class="no-pad panel-header free-course-panel-header" data-ng-class="{'free-course-panel-header': isFreeCourse}">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-2 text-center course-icon-container">
+                            <!-- ngIf: isNanodegree || isCareer -->
+                            <!-- ngIf: isPaidCourse || isFreeCourse --><div ng-if="isPaidCourse || isFreeCourse" class="ng-scope">
+                                <!-- ngIf: getIconForCourse(course) --><img class="course-icon ng-scope" ng-if="getIconForCourse(course)" ng-src="https://lh6.ggpht.com/KHjK8i_BBLXVYAverR73RvYt06rPk7JnKQWcUIyzMYUnVSPL_zC_asTuM-e69zkibagGRnC5u-bB04nPTQ=s250#w=1278&amp;h=786" src="https://lh6.ggpht.com/KHjK8i_BBLXVYAverR73RvYt06rPk7JnKQWcUIyzMYUnVSPL_zC_asTuM-e69zkibagGRnC5u-bB04nPTQ=s250#w=1278&amp;h=786"><!-- end ngIf: getIconForCourse(course) -->
+                            </div><!-- end ngIf: isPaidCourse || isFreeCourse -->
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="large-text nanodegree-title ng-binding">
+                                Matematicas
+                            </div>
+                            <!-- ngIf: isNanodegree && !course.graduated -->
+                            <!-- ngIf: isCareer && !course.graduated -->
+                            <!-- ngIf: isPaidCourse && !course.graduated -->
+                            <!-- ngIf: isFreeCourse && !course.graduated --><div data-ng-if="isFreeCourse &amp;&amp; !course.graduated" class="ng-scope">
+                                <div class="small-text">Course Material</div>
+                            </div><!-- end ngIf: isFreeCourse && !course.graduated -->
+                            <!-- ngIf: course.graduated -->
+                        </div>
+                        <!-- ngIf: isFreeCourse && !course.graduated --><span data-ng-if="isFreeCourse &amp;&amp; !course.graduated" class="play-circle pull-right ng-scope">
+                            <i class="glyphicon glyphicon-play-circle"></i>
+                        </span><!-- end ngIf: isFreeCourse && !course.graduated -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- ngIf: !isFreeCourse -->
+</div>
+			</div><!-- end ngRepeat: course in home.courses | isFreeCourse track by $index -->
+
+			<!-- GRADUATED NANODEGREE-->
+			<!-- ngRepeat: course in home.graduatedCourses | isNanodegree track by $index -->
+
+			<!-- GRADUATED CAREER-->
+			<!-- ngRepeat: course in home.graduatedCourses | isCareer track by $index -->
+
+			<!-- GRADUATED PAID COURSE-->
+			<!-- ngRepeat: course in home.graduatedCourses | isPaidCourse track by $index -->
+
+			<!-- GRADUATED FREE COURSE-->
+			<!-- ngRepeat: course in home.graduatedCourses | isFreeCourse track by $index -->
+
+			<div class="visible-lg visible-md visible-sm ng-isolate-scope" data-discover-nds=""><!-- MORE NANODEGREES -->
+<div class="row row-gap-small text-center more-nanodegrees-header">
+    <hr ng-class="{'more-nanodegrees-custom-hr': !home.showNewHomeBanner &amp;&amp; !home.isEnrolledOrGraduatedInAnyCourses()}" class="more-nanodegrees-custom-hr">
+
+    <!-- ngIf: home.isEnrolledOrGraduatedInAnyCourses() -->
+    <!-- ngIf: !home.isEnrolledOrGraduatedInAnyCourses() --><span class="large-text ng-scope" ng-if="!home.isEnrolledOrGraduatedInAnyCourses()">Empecemos</span><!-- end ngIf: !home.isEnrolledOrGraduatedInAnyCourses() -->
+    <p>Discover Nanodegrees and advance your career</p>
+</div>
+<div class="row">
+    <div class="row no-pad">
+        <!-- ngRepeat: degree in degrees --><div ng-repeat="degree in degrees" class="ng-scope">
+            <div class="col-sm-6 catalog-container-left" ng-class="{'catalog-container-left': $even, 'catalog-container-right': $odd}">
+                <a href="/course/nd801">
+                    <div class="catalog-box">
+                        <div class="row">
+                            <img ng-src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd801.svg" alt="Android Developer Nanodegree" class="img-responsive center-block" src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd801.svg">
+                        </div>
+                        <div class="row row-gap-small"></div>
+                        <div class="row large-text text-center ng-binding">
+                            Matematicas
+                        </div>
+                        <div class="small-text row text-center">
+                            &nbsp;
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: degree in degrees --><div ng-repeat="degree in degrees" class="ng-scope">
+            <div class="col-sm-6 catalog-container-right" ng-class="{'catalog-container-left': $even, 'catalog-container-right': $odd}">
+                <a href="/course/nd001">
+                    <div class="catalog-box">
+                        <div class="row">
+                            <img ng-src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd001.svg" alt="Front-End Web Developer Nanodegree" class="img-responsive center-block" src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd001.svg">
+                        </div>
+                        <div class="row row-gap-small"></div>
+                        <div class="row large-text text-center ng-binding">
+                            Geografía
+                        </div>
+                        <div class="small-text row text-center">
+                            &nbsp;
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: degree in degrees --><div ng-repeat="degree in degrees" class="ng-scope">
+            <div class="col-sm-6 catalog-container-left" ng-class="{'catalog-container-left': $even, 'catalog-container-right': $odd}">
+                <a href="/course/nd007">
+                    <div class="catalog-box">
+                        <div class="row">
+                            <img ng-src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd007.svg" alt="Tech Entrepreneur Nanodegree" class="img-responsive center-block" src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd007.svg">
+                        </div>
+                        <div class="row row-gap-small"></div>
+                        <div class="row large-text text-center ng-binding">
+                            Tech Entrepreneur 
+                        </div>
+                        <div class="small-text row text-center">
+                            &nbsp;
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: degree in degrees --><div ng-repeat="degree in degrees" class="ng-scope">
+            <div class="col-sm-6 catalog-container-right" ng-class="{'catalog-container-left': $even, 'catalog-container-right': $odd}">
+                <a href="/course/nd002">
+                    <div class="catalog-box">
+                        <div class="row">
+                            <img ng-src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd002.svg" alt="Data Analyst Nanodegree" class="img-responsive center-block" src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd002.svg">
+                        </div>
+                        <div class="row row-gap-small"></div>
+                        <div class="row large-text text-center ng-binding">
+                            Historia
+                        </div>
+                        <div class="small-text row text-center">
+                            &nbsp;
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: degree in degrees --><div ng-repeat="degree in degrees" class="ng-scope">
+            <div class="col-sm-6 catalog-container-left" ng-class="{'catalog-container-left': $even, 'catalog-container-right': $odd}">
+                <a href="/course/nd004">
+                    <div class="catalog-box">
+                        <div class="row">
+                            <img ng-src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd004.svg" alt="Full Stack Web Developer Nanodegree" class="img-responsive center-block" src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd004.svg">
+                        </div>
+                        <div class="row row-gap-small"></div>
+                        <div class="row large-text text-center ng-binding">
+                            Computación
+                        </div>
+                        <div class="small-text row text-center">
+                            &nbsp;
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: degree in degrees --><div ng-repeat="degree in degrees" class="ng-scope">
+            <div class="col-sm-6 catalog-container-right" ng-class="{'catalog-container-left': $even, 'catalog-container-right': $odd}">
+                <a href="/course/nd000">
+                    <div class="catalog-box">
+                        <div class="row">
+                            <img ng-src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd000.svg" alt="Intro to Programming Nanodegree" class="img-responsive center-block" src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd000.svg">
+                        </div>
+                        <div class="row row-gap-small"></div>
+                        <div class="row large-text text-center ng-binding">
+                            Ciencias
+                        </div>
+                        <div class="small-text row text-center">
+                            &nbsp;
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: degree in degrees --><div ng-repeat="degree in degrees" class="ng-scope">
+            <div class="col-sm-6 catalog-container-left" ng-class="{'catalog-container-left': $even, 'catalog-container-right': $odd}">
+                <a href="/course/nd003">
+                    <div class="catalog-box">
+                        <div class="row">
+                            <img ng-src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd003.svg" alt="iOS Developer Nanodegree" class="img-responsive center-block" src="http://s3.amazonaws.com/content.udacity-data.com/site-svgs/nd_icons/nd003.svg">
+                        </div>
+                        <div class="row row-gap-small"></div>
+                        <div class="row large-text text-center ng-binding">
+                            Inglés
+                        </div>
+                        <div class="small-text row text-center">
+                            &nbsp;
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: degree in degrees -->
+        <div class="row text-center">
+            Busca en <a href="content.html"><strong>Contenidos</strong></a>
+        </div>
+    </div>
+</div>
+</div>
+		</div>
+	</div>
+	<div class="row row-gap-large"></div>
+</div>
+</div>
+		</div>
+	</div>
 </div>
 
 <div id="footer">
